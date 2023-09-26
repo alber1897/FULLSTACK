@@ -1,3 +1,13 @@
+/*
+****** ESPECIFICIDAD ******
+  ELEMENTO >
+              CLASE  
+                    > 
+                        ID 
+                             >
+                                !IMPORTANT
+*/
+
 html{
     font-size:62.5%;
 }
@@ -6,23 +16,69 @@ body{
 }
 /* ESTO PERMITE AJUSTA 10PX=1REM */
 
-
-
-h1{
-    color:red;
-    /* Propiedad : valor;*/
-    background-color: yellow;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top:30px;
-    padding-bottom:100px; 
-    margin-top:200px;
-    margin-bottom: 200px;
-    border:30px solid black;
-    font-size:2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    max-width: 60%;
-}
 body{
-    background-color: green;
+    background-color: black;
+}
+
+ /* SELECTOR ELEMENTO  */
+ 
+    h1{
+        color:green;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    /* SELECTOR CLASE  */
+    .h3clases{
+        color:red;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    /* SELECTOR DE ID  */
+    #pId{
+        color:blue;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;  
+    }
+
+ /* SELECTOR DE ATRIBUTO  */
+
+    [src="/proyecto_inicio/img/Logo-Adecco.png"]{
+        margin:50px;
+        border:1px solid black;
+        
+    }
+
+ /* SELECTOR DE CADENA DESCENDENTE  */
+     
+    .pruebas h4{
+        color:pink;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;  
+    }
+
+ /* SELECTOR TODOS LOS HIJOS  */
+    .pruebas2 > h5{
+        color:yellow;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+    }
+    h5, h4{
+        color:white;
+        text-align: center;
+    }
+
+ /* SELECTOR MULTIPLE  */
+
+.seccion7 h3,.seccion7 h6{
+    color:purple;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
 }

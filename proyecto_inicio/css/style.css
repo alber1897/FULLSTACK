@@ -1,3 +1,11 @@
+
+:root{
+    --colorPrincipal:#F76666;
+    --colorSecundario:#02052F;
+    --fuentePrincipal:'Open Sans', sans-serif;
+    --fuenteCta:"DinBold", sans-serif;
+}
+
 html{
     font-size:62.5%;
     -webkit-text-size-adjust: 100%;
@@ -7,7 +15,7 @@ html{
 }
 body{
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--fuentePrincipal);
     font-weight: 400;
     color: #02052F;
     margin: 0;
@@ -15,6 +23,7 @@ body{
     line-height: 1.5;
     text-align: left;
     background-color: #fff;
+    /* background-color: var(--colorPrincipal); */
 }
 .zona-centro h1 {
     background: rgba(248, 102, 102, 0.65);
@@ -32,7 +41,7 @@ body{
     float: right;
 }
 .cta {
-    font-family: "DinBold", sans-serif;
+    font-family: var(--fuenteCta);
     min-height: 50px;
     font-weight: 700;
     font-size: 14px;
@@ -143,4 +152,101 @@ footer h3 {
 }
 footer a {
     color: #02052F;
+}
+.zonas h2 {
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+.zonas h4 {
+    font-size: 15px;
+    margin-bottom: 22px;
+    line-height: 1.8;
+}
+.zona-centro .arrow {
+    color: #F76666;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    display: block;
+    text-decoration: underline;
+}
+.inscripciones h2 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.zonas h2 {
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+.text-white {
+    color: #fff !important;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+.zonas p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.inscripciones h2 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.zonas h2 {
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+.card-info-dynamic .icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    left: 40px;
+}
+.colabor img {
+    max-height: 60px;
+}
+.zona-centro .c-zona {
+    color: #F76666;
+}
+footer h3 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+#primary-menu-footer a {
+    font-size: 14px;
+    color: #02052F;
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.scrollToTop {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    bottom: 75px;
+    right: 40px;
+    display: none;
+    background-image: url(/proyecto_inicio/img/up-top.png);
 }

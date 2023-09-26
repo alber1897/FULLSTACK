@@ -6,23 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Carrera Digital</title>
 
+ <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <style>
-        h1{
-            color:red;
-            /* Propiedad : valor;*/
-            background-color: yellow;
-        }
-    </style> -->
+
 </head>
 
 <body class="zonas zona-centro">
    
     
     <header>
-        <a href="">Login Alumnos</a>
-        <a href="">Login Empresas</a>
+        <a class="c-zona" href="">Login Alumnos</a>
+        <span class="c-zona">|</span>
+        <a class="c-zona" href="">Login Empresas</a>
         <a href=""><img src="/proyecto_inicio/img/Tu-carrera-digital-general.png"></a>
         <a href="">Cursos</a>
         <a href="">Sobre nosotros</a>
@@ -33,25 +31,25 @@
         <h1>
             Descubre la formación que te dará la oportunidad de convertirte en un profesional digital
         </h1>
-        <a href="#"> <img src="img/zona-centro/ico-centro.png" alt=""></a>
+        <a href="#"> <img class="precta" src="img/ico-centro.png" alt=""></a>
         <a class="cta" href="#">Ver Cursos</a>
     </main>
     <section>
         <img src="/proyecto_inicio/img/Logos-oficiales.png" class="img-fluid" alt="Carrera digital"">
+        <img src="/proyecto_inicio/img/Logo-Adecco.png" class="img-fluid" alt="Carrera digital"">
+   
     </section>
     <section class="mb70">
+        <h3 class="c-zona pt40 pb10 mb30">Cursos</h3>
         <h2> CAMBIA TU FUTURO </h2>
-
-        <h3>Cursos</h3>
-
         <h2>MARKETING DIGITAL</h2>
-        <a href="#">INSCRIBIRME</a>
+        <a href="#" class="cta">INSCRIBIRME</a>
 
         <h2> PROGRAMACIÓN DE VIDEOJUEGOS, DISEÑO 3D Y REALIDAD VIRTUAL </h2>
-        <a href="#">INSCRIBIRME</a>
+        <a href="#" class="cta">INSCRIBIRME</a>
 
         <h2> PROGRAMACIÓN WEB FULL STACK </h2>
-        <a href="#">INSCRIBIRME</a>
+        <a href="#" class="cta">INSCRIBIRME</a>
     </section>
 
     <section class="bg-white pb60">
@@ -79,9 +77,9 @@
             encontrar un
             empleo.</p>
         <h4><b>PARA PARTICIPAR, NECESITARÁS ESTAR INSCRITO EN GARANTÍA JUVENIL</b></h4>
-        <a href="#">IR A LA WEB DE GARANTÍA JUVENIL</a>
-        <p> Descárgate esta infografía en la que te mostramos cómo descargar tu certificado de Garantía Juvenil:</p>
-        <a href="#">DESCARGAR INFOGRAFÍA ADJUNTA</a>
+        <a class="arrow" href="#">IR A LA WEB DE GARANTÍA JUVENIL</a>
+         <b>Descárgate esta infografía en la que te mostramos cómo descargar tu certificado de Garantía Juvenil:</b>
+        <a class="cta" href="#">DESCARGAR INFOGRAFÍA ADJUNTA</a>
     </section>
     <section class="pb101">
         <h5>
@@ -93,29 +91,28 @@
     </section>
     
     <section class="pb100 inscripciones"> 
-        <h2>LOCALIZACIONES:</h2>
-        <h3>Madrid</h3>
-        <p>CALLE del Marqués de Ahumada 7 Planta baja aula 15 28028, MADRID, MADRID.</p>
-        <h3>Madrid</h3>
-        <p>CALLE HOSPITAL 2 28012, MADRID, MADRID.</p>
+        <h2 class="text-white font-weight-bold">LOCALIZACIONES:</h2>
+        <h3 class="mb-0 text-white font-weight-bold text-uppercase">Madrid</h3>
+        <p class="mb-0 text-white text-uppercase">CALLE del Marqués de Ahumada 7 Planta baja aula 15 28028, MADRID, MADRID.</p>
+        <p class="mb-0 text-white text-uppercase">CALLE HOSPITAL 2 28012, MADRID, MADRID.</p>
     </section>
    
-    <section class="bg-info">
-        <h3>CONTACTAR</h3>
-        <h2>¿TIENES DUDAS? HABLA CON NOSTROS: </h2>
+    <section class="pb70 colabor inscripciones .zona-centro bg-info">
+        <h3 class="text-white text-light">CONTACTAR</h3>
+        <h2>¿TIENES DUDAS? HABLA CON NOSOTROS: </h2>
         
-        <img src="/proyecto_inicio/img/ico-TLF.png">
+        <img class="icon" src="/proyecto_inicio/img/ico-TLF.png">
 
-        <h3>LLÁMANOS</h3>
-        <a href="#">638024408</a>
+        <h3 class="text-card">LLÁMANOS</h3>
+        <a href="#" class=".zona-centro c-zona">638024408</a>
 
-        <img src="/proyecto_inicio/img/ico-EMAIL.png">
-        <h3>ESCRÍBENOS</h3>
-        <a href="#">patric.departearroyo@adecco.com</a>
+        <img class="icon" src="/proyecto_inicio/img/ico-EMAIL.png">
+        <h3 class="text-card">ESCRÍBENOS</h3>
+        <a href="#" class=".zona-centro c-zona">patric.departearroyo@adecco.com</a>
     </section>
-    <footer>
-        <a class="text-uppercase" href="">Cursos Zona-Centro</a>
-        <a class="text-uppercase" href="">SOBRE NOSOTROS</a>
+    <footer class="bg-gray-light">
+        <h3 class="text-uppercase" >Cursos Zona-Centro</h3>
+        <a href="#" class="mr-50">SOBRE NOSOTROS</a>
         <a class="mr-50" href="">Preguntas frecuentes</a>
         <a class="mr-50" href="">Politica de Cookies</a>
         <a class="mr-50" href="">Politica de Privacidad</a>
@@ -124,7 +121,7 @@
 
    
     <a href="#"><img src="/proyecto_inicio/img/zona-centro/CTA-informate.png" alt=""></a>
-    <img src="/proyecto_inicio/img/up-top.png" alt="">
+    <a href="#inicio" class="scrollToTop" style="display: inline;"></a>
 </body>
 
 </html>
