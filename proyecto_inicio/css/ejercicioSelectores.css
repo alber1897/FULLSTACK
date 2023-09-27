@@ -82,3 +82,13 @@ body{
     text-align: center;
     font-size: 4rem;
 }
+.amarillo{
+    background-color: yellow;
+    height: 300px;
+}
+.azul{
+    background-color: blue;
+    height: 100px;
+    max-width: 88%;
+    margin:0 auto;
+}
