@@ -78,89 +78,228 @@ h1{
 
 
  /* CURSOS */
-.previa{
-    padding-bottom: 50px;
-}
-.previa>h3{
-    color:var(--colorPrincipal);
-    font-size: 1.7rem;
-    margin:40px 0px;
-    padding-bottom: 10px;
+ .seccionCursos h3{
     text-align: center;
-    font-weight: 800;
+    color: var(--colorPrincipal);
     font-family: var(--fuentePrincipal);
+    font-weight: 800;
     text-transform: uppercase;
+    font-size: 1.7rem;
+    margin: 40px 0px;
 }
- 
-.previa>h2{
-    font-size: 27px;
-    margin-bottom: 22px;
+
+.seccionCursos>h2{
+    margin-bottom: 72px;
     text-align: center;
+    color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+
 }
-.enlacesPrevia{
-    padding-top:20px;
-    padding-bottom: 20px;
+
+.botonesCursos{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    
+    margin-bottom: 105px;
 }
-.enlace1{
-    width: auto;
-    height: auto;
-    color:white;
-    text-decoration: none;
+
+.botonVerTodo{
     background-color: var(--colorPrincipal);
-    padding:10px 20px 10px 20px;
-    border: 1px solid var(--colorPrincipal);
-    font-family: var(--fuenteBotones);
+    color: white;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    padding: 12px 24px;
     text-transform: uppercase;
-    font-weight: 600;
-}
-.enlace2{
-    width: auto;
-    height: auto;
-    color:black;
     text-decoration: none;
-    background-color: white;
-    padding:10px 20px 10px 20px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     border: 1px solid var(--colorPrincipal);
-    margin-left: 10px;
-    font-family: var(--fuenteBotones);
+}
+.botonMadrid{
+    background-color: white;
+    color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    padding: 12px 24px;
     text-transform: uppercase;
-    font-weight:600;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid var(--colorPrincipal);
 }
-.cursos{
+
+.cursosOfertados{
+    margin-bottom: 120px;
     display: flex;
-    justify-content:space-between;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.cursosOfertados>div{
+
+    max-width: 50%;
+    flex: 2;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+}
+
 .marketing{
     background-image: url(../img/Curso-marketing-digital-centro.png);
-    min-height: 300px;
-    background-position: right !important;
-    margin-bottom: 30px;
-    padding: 40px 60px;
-    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 15px;
 }
-.programacion{
-    background-image: url(../img/Curso-programacion-web-full-stack-centro.png);
-    min-height: 300px;
-    background-position: right !important;
-    margin-bottom: 30px;
-    padding: 40px 60px;
-    position: relative;
+
+.videojuegos{
+    background-image: url(../img/Curso-programacion-videojuegos-centro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-left: 15px;
 }
+
+.cursosOfertados h2{
+
+    color: white;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 22px;
+
+}
+
+.cursosOfertados a{
+    color: var(--colorPrincipal);
+    font-size: 1.4rem;
+    background-color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 20px 60px;
+    display: inline-block;
+}
+
+    
 
  /* PIDENOSLO */
+ .pidenoslo{
+    text-align: center;
+    margin-bottom: 80px;
+ }
+.pidenoslo h3{
+    font-size: 17px;
+    margin-bottom: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: var(--fuenteBotones);
+    font-weight: 600;
+    color:var(--colorSecundario);
+}
+.pidenoslo a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--colorPrincipal);
+    font-weight: 700;
+    float: none;
+    padding: 20px 40px;
+    border-radius: 96px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    color: white;
 
-
+}
 
  /* VIDEO */
+ .video{
+    padding-bottom: 70px;
+ }
+.video div{
+display: flex;
+justify-content: center;
 
+}
 
  /* PARA QUIEN SON ESTOS CURSOS */
 
+.paraquien{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.paraquien div{
+    border:2px solid black;
+    max-width: 50%;
+    flex:2;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.paraTexto{
+padding-bottom: 20px;
+}
+.paraImagen{
+background-color: #F76666;
+display: flex;
+justify-content: center;
+}
 
+.paraTexto{
+    display: flex;
+    max-width: 50%;
+    
+}
 
+.paraTexto h3{
+    color: var(--colorPrincipal);
+    font-size: 17px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+.paraTexto h2{
+    color: var(--colorSecundario);
+    font-size: 27px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-family: var(--fuenteBotones);
+}
+.paraTexto p{
+    color: var(--colorSecundario);
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-family: var(--fuentePrincipal);
+}
+.paraTexto h4{
+    color: var(--colorSecundario);
+    font-size: 14px;
+    font-weight: 800;
+    font-family: var(--fuentePrincipal);
+}
+.ir{
+    color: #F76666 ;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    display: block;
+    text-decoration: underline;
+}
+.boxMayor{
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
 
  /* LOCALIZACIONES */
     .localizaciones{
