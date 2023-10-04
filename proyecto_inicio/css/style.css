@@ -33,9 +33,9 @@ body{
          margin:0 auto;
         }
      }
-     @media (max-width:768px) and (min-width:480px) {
+     @media (max-width:768px) and (min-width:380px) {
         .contenedor{
-         max-width: 86%;
+         max-width: 90%;
          margin:0 auto;
         }
      }
@@ -49,6 +49,12 @@ body{
 .margenDerecho{
     margin-right: 34%;
 }
+
+ @media (max-width:1140px) {
+    .margenDerecho{
+        margin-right: 0;
+    } 
+} 
 h1{
     background: rgba(248, 102, 102, 0.65);
     font-size: 4.5rem;
@@ -69,9 +75,12 @@ h1{
     text-transform: uppercase;
     font-family: "DinBold", sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;
-    
-    
+    font-size: 1.4rem; 
+}
+@media (max-width:768px) {
+    .fondoMain a{
+        padding: 24px 70px;
+    }
 }
 .flexMain{
     display: flex;
@@ -79,20 +88,44 @@ h1{
     justify-content: space-between;
 
 }
+.flexMain img{
+    margin-right: 10px;
+}
 
  /* ESTILOS CORPORACIONES */
 .logos{
     background-color: #fff;
     border-radius: 20px;
     margin-top: -80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding:30px;
     border-radius:12px;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
 }
-
+@media (max-width:1140px) and (min-width:768px){
+    .logoOficial{
+        max-width: 70%;
+        
+    }
+    .logoadeco{
+        max-width: 30%;
+    }
+} 
+@media (max-width:768px){
+    
+    .logos{
+        width: 70%;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+       
+    }
+    .logos img{
+        padding: 20px;
+        max-width: 90%;
+    }
+}
 
  /* CURSOS */
  .seccionCursos h3{
@@ -167,7 +200,12 @@ h1{
     justify-content: space-between;
     min-height: 300px;
 }
-
+@media (max-width:1140px) and (min-width:768px){
+    .cursosOfertados>div{
+        padding: 30px 30px;
+        
+    }
+}
 .marketing{
     background-image: url(../img/Curso-marketing-digital-centro.png);
     background-size: cover;
@@ -205,7 +243,16 @@ h1{
     padding: 20px 60px;
     display: inline-block;
 }
-
+@media (max-width:768px){
+    .cursosOfertados {
+        flex-direction: column;
+       
+    }
+    .cursosOfertados>div{
+        margin: 15px 0;
+        max-width: 100%;
+    }
+}
     
 
  /* PIDENOSLO */
@@ -251,6 +298,22 @@ display: flex;
 justify-content: center;
 
 }
+.video iframe{
+    width:1120px;
+    height:630px;
+}
+@media (max-width:768px) {
+    .video iframe{
+        width: 100%;
+        height: 250px;   
+    }
+}
+@media (max-width:1140px) and (min-width:768px) {
+    .video iframe{
+        width: 100%;
+        height: 350px;   
+    }
+}
 
  /* PARA QUIEN SON ESTOS CURSOS */
 
@@ -264,25 +327,31 @@ justify-content: center;
     font-weight: 800;
     font-family: var(--fuenteBotones);
 }
+.paraquien>div{
+    flex:1;
+    max-width: 50%;
+}
+@media (max-width:1140px){
+    .paraquien{
+        flex-direction: column;
+        margin-bottom: 120px;
+    }
+    .paraquien>div{
+        flex:1;
+        max-width: 100%;
+    }
+}
 
 .paraTexto{
-
 padding: 30px;
-padding-bottom: 20px;
-max-width: 50%;
-flex:2;
 flex-wrap: wrap;
 }
 
-
-.paraImagen{
-    
+.paraImagen{   
 margin-top: 12%;
-flex:2;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-width: 100%;
 }
 
 .box16{
@@ -410,6 +479,19 @@ width: 100%;
         max-width: 25%;
         padding-right: 4%;
     }
+    @media (max-width:1140px) and (min-width:480px){
+        .direcciones div{
+            max-width: 50%;
+        }
+    }
+    @media (max-width:768px) {
+        .direcciones{
+            flex-wrap:wrap;
+        }
+        .direcciones div{
+            max-width: 100%;
+        }
+    }
 
  /* CONTACTAR */
 .contactar{
@@ -417,47 +499,62 @@ width: 100%;
     padding: 60px;
 }
 .contactar h3{
-    color:white;
+    color: white;
     font-size: 17px;
     margin-bottom: 22px;
     font-weight: 300;
     font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
 }
 .contactar h2 {
-    color: #fff;
-    font-weight: 700;
-    margin-bottom: 50px;
+    color: white;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 .telefonos{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+
 }
+
 .llamanos{
-    width: 50%;
-    background-color: white;
-    border-radius:0.4rem;
-    padding-left: 30px !important;
-    padding-top: 20px!important;
-    padding-bottom: 20px!important;
-    padding-right: 30px!important;
     display: flex;
+    background-color: white;
+    margin-right: 15px;
+    border-radius: 0.55rem;
     flex-direction: row;
     justify-content: flex-start;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
 }
 .correo{
-    width: 50%;
-    margin-left: 30px;
     background-color: white;
-    border-radius:0.4rem;
-    padding-left: 30px !important;
-    padding-top: 20px!important;
-    padding-bottom: 20px!important;
-    padding-right: 30px!important;
+    margin-left: 15px;
+    border-radius: 0.55rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
 }
+@media (max-width:1140px)  {
+    .telefonos{
+        flex-wrap: wrap;
+    }
+    .llamanos, .correo{
+        max-width: 100%;
+        margin:10px 0px;
+
+    }
+    .telefonos img{
+        height: 60px;
+    }
+
+}
+
 .telefonos h3{
     color: var(--colorSecundario);
     font-size: 14px;
@@ -531,63 +628,86 @@ text-transform: uppercase;
 }
 
  /* HEADER */
- .cabecera{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-
- }
- .login{
-    display: flex;
-    flex-direction: block;
-    justify-content: flex-end;
-    padding: 20px;
-    
- }
- .login a{
-    color: var(--colorPrincipal);
-    text-decoration: none;
-    margin-left: 7px;
-    margin-right: 7px;
-    font-family: var(--fuentePrincipal);
-    font-weight: 400;
- }
- .login a:hover{
-    text-decoration: underline;
- }
- .cabeceraTodo{
+ 
+.seccionHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1%;
- }
- .enlacesCabecera a{
-    color: #02052F;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    margin-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.seccionEnlaces {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.seccionLogin {
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.seccionLogin a {
+
+    color: var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+    margin-left: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-decoration: none;
- }
- .enlacesCabecera a:hover{
-    text-decoration: underline;
- }
- .informateC{
-    background-color: var(--colorPrincipal);
-    color: #fff !important;
-    display: inline-block;
     font-weight: 400;
-    text-align: center;
-    border: 1px solid transparent;
+    font-size: 1.7rem;
+}
+
+.seccionLogin a:hover {
+    text-decoration: underline;
+}
+
+
+.seccionNav a {
+    color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    margin-left: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.7rem;
+    display: inline-block;
+}
+
+.seccionNav a:hover {
+    text-decoration: underline;
+}
+
+.botonInformate {
+    background-color: var(--colorPrincipal);
     padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    line-height: 1.5;
     border-radius: 4rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: white !important;
+}
+
+.botonInformate:hover {
+    background-color: var(--colorSecundario);
     text-decoration: none !important;
 }
- .informateC:hover{
-    background-color: #117585 !important;
- }
+
+.seccionImagen {
+    width: 30%;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+@media (max-width:768px){
+    .seccionHeader{
+        flex-direction: column;
+    }
+    .seccionImagen,.seccionEnlaces{
+        max-width: 100%;
+        align-items: center;
+        margin-right: 0;
+    }
+}

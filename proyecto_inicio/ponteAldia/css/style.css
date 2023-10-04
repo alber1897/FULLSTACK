@@ -1,3 +1,7 @@
+body{
+    
+}
+
 .seccion1>h2{
     background-color: aqua;
     height: 100px;
@@ -160,4 +164,18 @@
     .medias{
         background-color: brown;
     }
+}
+.ejercicioAR{
+    height: 500px;
+    background-image: linear-gradient(to right, red 0%, blue 50%);
+
+    position: relative;
+}
+.ejercicioAR div{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    right: 0px;
 }
