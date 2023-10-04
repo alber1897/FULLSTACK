@@ -1,0 +1,163 @@
+.seccion1>h2{
+    background-color: aqua;
+    height: 100px;
+}
+.seccion2>div>div>h2{
+    background-color: aqua;
+    height: 100px;
+}
+.seccionPadding{
+    height: 200px;
+    background-color: yellowgreen;
+    margin: 50px;
+    
+}
+
+.seccionPadding1{
+    height: 200px;
+    background-color: yellow;
+    padding: 50px;
+}
+
+.seccionDisplay>p{
+    background-color: aquamarine;
+    
+}
+.seccionDisplay a{
+    background-color: blue;
+}
+.seccionDisplay h1{
+    background-color: blueviolet;
+}
+.seccionDisplay h3{
+    background-color: brown;
+}
+.seccionDisplay h6{
+    background-color: burlywood;
+}
+.seccionDisplay div{
+    background-color: chartreuse;
+}
+
+.seccionDisplay1 p{
+    background-color: aquamarine;
+    display: inline;
+    
+}
+.seccionDisplay1 a{
+    background-color: blue;
+    display: block;
+}
+.seccionDisplay1 h1{
+    background-color: blueviolet;
+    display: inline;
+}
+.seccionDisplay1 h3{
+    background-color: brown;
+    display: inline;
+}
+.seccionDisplay1 h6{
+    background-color: burlywood;
+    display: inline;
+}
+.seccionDisplay1 div{
+    background-color: black;
+    display: inline;
+}
+.seccionFlex{
+    background-color: green;
+    height: 300px;
+    width: 300px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.seccionFlex1{
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+}
+.porcentajes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.seccionP1{
+    width: 20%;
+    border:2px solid black;
+    text-align: center;
+}
+.seccionP2{
+    width: 30%;
+    border:2px solid black;
+    text-align: center;
+}
+.seccionP3{
+    width: 50%;
+    border:2px solid black;
+    text-align: center;
+}
+.alturas{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.cien{
+    height: 100px;
+    border:2px solid black;
+}
+.doscientos{
+    height: 200px;
+    border:2px solid black; 
+}
+.ultimoE{
+    display: flex;
+}
+.ultimoE1{
+    width: 40%;
+    border: 2px solid black;
+}
+.ultimoE2{
+    display: flex;
+    width: 60%;
+    border: 2px solid black;
+    padding:10px;
+}
+.p1{
+    width: 30%;
+    border: 2px solid black;
+}
+.p2{
+    width: 70%;
+    border: 2px solid black;
+}
+.medias{
+    height: 500px;
+}
+@media (max-width:350px) and (min-width:0px) {
+    .medias{
+        background-color: green;
+    }
+}
+@media (max-width:616px) and (min-width:351px) {
+    .medias{
+        background-color: red;
+    } 
+}
+@media (max-width:933px) and (min-width:617px){
+    .medias{
+        background-color: blue;
+    }  
+}
+@media (min-width:934px){
+    .medias{
+        background-color: brown;
+    }
+}

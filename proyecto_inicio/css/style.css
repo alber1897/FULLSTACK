@@ -13,15 +13,32 @@ html{
 body{
     font-size: 16px;
     font-family: var(--fuentePrincipal);
+
+
 }
 
+
+
 /* ESTILOS GENERICOS */
-    .contenedor{
-        max-width: 83%;
-        margin:0 auto;
-
-    }
-
+    
+    @media (min-width:1140px) {
+        .contenedor{
+         max-width: 83%;
+         margin:0 auto;
+        }
+     }
+     @media (max-width:1140px) and (min-width:768px) {
+        .contenedor{
+         max-width: 76%;
+         margin:0 auto;
+        }
+     }
+     @media (max-width:768px) and (min-width:480px) {
+        .contenedor{
+         max-width: 86%;
+         margin:0 auto;
+        }
+     }
  /* ESTILOS MAIN */
 .fondoMain{
     background-image: url(../img/11641893944_banner_zona_centro.png);
@@ -221,6 +238,9 @@ h1{
     color: white;
 
 }
+.pidenoslo a:hover{
+    background-color: var(--colorSecundario);
+}
 
  /* VIDEO */
  .video{
@@ -238,27 +258,76 @@ justify-content: center;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.paraquien div{
-    border:2px solid black;
-    max-width: 50%;
-    flex:2;
-    padding: 30px;
-    flex-wrap: wrap;
-}
-.paraTexto{
-padding-bottom: 20px;
-}
-.paraImagen{
-background-color: #F76666;
-display: flex;
-justify-content: center;
+    color: var(--colorSecundario);
+    font-size: 27px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-family: var(--fuenteBotones);
 }
 
 .paraTexto{
+
+padding: 30px;
+padding-bottom: 20px;
+max-width: 50%;
+flex:2;
+flex-wrap: wrap;
+}
+
+
+.paraImagen{
+    
+margin-top: 12%;
+flex:2;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: 100%;
+}
+
+.box16{
+    width: auto;
+    height: 60%;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:40px;
+    background-color: #F76666;
+}
+.boxForma{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    color:white !important;
+    height: 100px;
+    margin-top: -5%;
+}
+.blanco {
+    color: white;
+}
+.paraTexto{
     display: flex;
     max-width: 50%;
-    
+}
+.boxForma>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.boxForma h5{
+    padding:30px;
+    width: 60%;
+    background-color: #000;
+    margin-right: 4%;
+    padding-bottom: 6%;
+}
+.botonDificil{
+    height: 40px;
+    width: 45px;
+    margin-top: 2.5%;
 }
 
 .paraTexto h3{
@@ -295,22 +364,230 @@ justify-content: center;
     display: block;
     text-decoration: underline;
 }
-.boxMayor{
-    display: flex;
-    flex: row;
-    justify-content: center;
-}
+
+
+
+
+
+
+
 
  /* LOCALIZACIONES */
     .localizaciones{
         background-color: black;
+        padding: 80px;
+    }
+    .localizaciones h2{
+        color: white;
+        font-size: 27px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-family: var(--fuenteBotones);
+    }
+    .localizaciones h3{
+        color: white;
+        font-size: 17px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-family: var(--fuenteBotones);
+    }
+    .localizaciones p{
+        color: white;
+        font-size: 13px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-family: var(--fuenteBotones);
+    }a
+    .localizaciones div{
+        padding-top: 30px;
+    }
+    .direcciones{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .direcciones div{
+        max-width: 25%;
+        padding-right: 4%;
     }
 
  /* CONTACTAR */
-
-
+.contactar{
+    background-color: var(--colorPrincipal);
+    padding: 60px;
+}
+.contactar h3{
+    color:white;
+    font-size: 17px;
+    margin-bottom: 22px;
+    font-weight: 300;
+    font-family: var(--fuentePrincipal);
+}
+.contactar h2 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.telefonos{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.llamanos{
+    width: 50%;
+    background-color: white;
+    border-radius:0.4rem;
+    padding-left: 30px !important;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+    padding-right: 30px!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.correo{
+    width: 50%;
+    margin-left: 30px;
+    background-color: white;
+    border-radius:0.4rem;
+    padding-left: 30px !important;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+    padding-right: 30px!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.telefonos h3{
+    color: var(--colorSecundario);
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-family: var(--fuenteBotones);
+}
+.datos{
+    margin-left:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.datos a{
+    text-decoration: none;
+    color:var(--colorPrincipal);
+    font-family: var(--fuenteBotones);
+    font-weight: 600;
+    font-size: 14px;
+}
 
  /* FOOTER */
+.pie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nosotros{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.nosotros  h3{ 
+color:var(--colorSecundario);
+font-size: 17px;
+margin-bottom: 22px;
+font-weight: 800;
+font-family: var(--fuentePrincipal);
+text-transform: uppercase;
+}
+.nosotros a{
+    margin-left: 40px;
+    color:var(--colorSecundario);
+}
 
+.privacidad{
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid var(--colorSecundario);
+    border-bottom: 1px solid var(--colorSecundario);
+}
+.privacidad a{
+    font-size: 14px;
+    color:var(--colorSecundario);
+    margin-right: 50px;
+}
+
+/* BOTON FLOTANTE */
+.scrollToTop {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    bottom: 75px;
+    right: 40px;
+    display: none;
+    background-image: url(../img/up-top.png)
+}
 
  /* HEADER */
+ .cabecera{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+ }
+ .login{
+    display: flex;
+    flex-direction: block;
+    justify-content: flex-end;
+    padding: 20px;
+    
+ }
+ .login a{
+    color: var(--colorPrincipal);
+    text-decoration: none;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+ }
+ .login a:hover{
+    text-decoration: underline;
+ }
+ .cabeceraTodo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+ }
+ .enlacesCabecera a{
+    color: #02052F;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 25px;
+    text-decoration: none;
+ }
+ .enlacesCabecera a:hover{
+    text-decoration: underline;
+ }
+ .informateC{
+    background-color: var(--colorPrincipal);
+    color: #fff !important;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-decoration: none !important;
+}
+ .informateC:hover{
+    background-color: #117585 !important;
+ }

@@ -17,14 +17,25 @@
 <body>
 
 
-    <header>
-        <a class="" href="">Login Alumnos</a>
-        <span class="">|</span>
-        <a class="" href="">Login Empresas</a>
-        <a href=""><img src="/proyecto_inicio/img/Tu-carrera-digital-general.png"></a>
-        <a href="">Cursos</a>
-        <a href="">Sobre nosotros</a>
-        <a href="">Informate</a>
+    <header class="cabecera contenedor">
+
+        <div class="login">
+            <a class="" href="">Login Alumnos</a>
+            <span style="color:#F76666">|</span>
+            <a class="" href="">Login Empresas</a>
+        </div>
+        <div class="cabeceraTodo">
+            <div>
+                <a href=""><img src="/proyecto_inicio/img/Tu-carrera-digital-general.png"></a>
+            </div>
+            <div class="enlacesCabecera">
+                <a href="">Cursos</a>
+                <a href="">Sobre nosotros</a>
+                <a href="" class="informateC">Informate</a>
+            </div>
+            
+        </div>
+        
 
     </header>
 
@@ -82,7 +93,7 @@
     <section class="contenedor video">
 
         <div>
-            <iframe class="" width="560" height="315" src="https://www.youtube.com/embed/SzZlMSDKE8o?si=lFxp6BjIIOobpLi6"
+            <iframe class="" width="1120" height="630" src="https://www.youtube.com/embed/SzZlMSDKE8o?si=lFxp6BjIIOobpLi6"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
@@ -113,19 +124,24 @@
         </div>       
         <!-- AQUI SEPARA LA ANTIGUA IMAGEN -->
         <div class="paraImagen">
-            <div class="boxMayor">
+            
                <div class="box16">
+                
                     ¿Eres mayor de 16 años y menor de 30?
                     <p>
-                        ¿Estás sin trabajar?<br>
-                        ¿Estás sin cursar formación?
+                        <span class="blanco">¿Estás</span> sin trabajar<span class="blanco">?</span><br>
+                        <span class="blanco">¿Estás</span> sin cursar formación<span class="blanco">?</span>
                     </p>
-                    <h5>DALE FORMA A TU FUTURO<br> Y DESPEGA CON<br> TU CARRERA DIGITAL</h5> -->
+                
                </div>
+               
                <div class="boxForma">
-                <h5>DALE FORMA A TU FUTURO<br> Y DESPEGA CON<br> TU CARRERA DIGITAL</h5> -->
-           </div>
-             </div>  
+                    
+                                <img class="botonDificil" src="../proyecto_inicio/img/ico-centro.png">
+                                <h5>DALE FORMA A TU FUTURO Y DESPEGA CON <span style="color:#F76666">TU CARRERA DIGITAL</span></h5>
+                
+                </div>
+               
        
         
         </div>
@@ -133,38 +149,65 @@
 
     <section class="localizaciones">
         <div class="contenedor">
-            <h2 class="">LOCALIZACIONES:</h2>
-            <h3 class="">Madrid</h3>
-            <p class="">CALLE del Marqués de Ahumada 7 Planta baja aula 15 28028, MADRID, MADRID.</p>
-            <p class="">CALLE HOSPITAL 2 28012, MADRID, MADRID.</p>
+            <h2>LOCALIZACIONES:</h2>
+            <div class="direcciones">
+                <div>
+                    <h3>Madrid</h3>
+                    <p>CALLE del Marqués de Ahumada 7 Planta baja aula 15 28028, MADRID, MADRID.</p>    
+                </div>
+                <div>
+                    <h3>Madrid</h3>
+                    <p>CALLE del Marqués de Ahumada 7 Planta baja aula 15 28028, MADRID, MADRID.</p>    
+                </div>
+   
+            </div>
+ 
         </div>
     </section>
 
-    <section class="">
-        <h3 class="">CONTACTAR</h3>
-        <h2>¿TIENES DUDAS? HABLA CON NOSOTROS: </h2>
+    <section class="contactar">
+        <div class="contenedor">
+            <h3 >CONTACTAR</h3>
+            <h2>¿TIENES DUDAS? HABLA CON NOSOTROS: </h2>
+            <div class="telefonos">
+                <div class="llamanos">
+                    <img class="" src="/proyecto_inicio/img/ico-TLF.png">
+                    <div class="datos">
+                        <h3 >LLÁMANOS</h3>
+                        <a href="#">638024408</a>
+                    
+                    </div>
+                    
+                </div> 
+                <div class="correo">   
+                    <img  src="/proyecto_inicio/img/ico-EMAIL.png">
+                    <div class="datos">
+                        <h3>ESCRÍBENOS</h3>
+                        <a href="#">patric.departearroyo@adecco.com</a>
+                    </div>
 
-        <img class="" src="/proyecto_inicio/img/ico-TLF.png">
-
-        <h3 class="">LLÁMANOS</h3>
-        <a href="#" class="">638024408</a>
-
-        <img class="" src="/proyecto_inicio/img/ico-EMAIL.png">
-        <h3 class="">ESCRÍBENOS</h3>
-        <a href="#" class="">patric.departearroyo@adecco.com</a>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer class="">
-        <h3 class="">Cursos Zona-Centro</h3>
-        <a href="#" class="">SOBRE NOSOTROS</a>
-        <a class="" href="">Preguntas frecuentes</a>
-        <a class="" href="">Politica de Cookies</a>
-        <a class="" href="">Politica de Privacidad</a>
-        <a class="" href="">Aviso Legal</a>
-    </footer>
 
+    <footer class="contenedor">
+        <div class="nosotros">
+            <h3>Cursos Zona-Centro</h3>
+            <h3><a href="">SOBRE NOSOTROS</a></h3>
+        </div>
+        <div class="privacidad">
+            <a class="" href="">Preguntas frecuentes(FAQ)</a>
+            <a class="" href="">Politica de Cookies</a>
+            <a class="" href="">Politica de Privacidad</a>
+            <a class="" href="">Aviso Legal</a>
+        </div>
+
+
+    </footer>
+    <a href="#inicio" class="scrollToTop" style="display: inline;"></a>
 
     <a href="#"><img src="/proyecto_inicio/img/zona-centro/CTA-informate.png" alt=""></a>
-    <a href="#inicio" class="" style="display: inline;"></a>
 </body>
 
 </html>
