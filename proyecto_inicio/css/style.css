@@ -471,6 +471,13 @@ justify-content: flex-start;
         padding-top: 30px;
     }
     .direcciones{
+        display: grid;
+        grid:1fr / 1fr 1fr 1fr 1fr;
+    }
+    .direcciones div{
+        padding: 4%;
+    }
+    /* .direcciones{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -491,7 +498,7 @@ justify-content: flex-start;
         .direcciones div{
             max-width: 100%;
         }
-    }
+    } */
 
  /* CONTACTAR */
 .contactar{

@@ -179,3 +179,37 @@ body{
     top: 200px;
     right: 0px;
 }
+.ejercicioGrid{
+    display:grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 200px 100px;
+    
+    
+}
+.ejercicioGrid div{
+    border:1px solid black;
+    text-align: center;
+    
+}
+.ejercicioGrid2{
+    margin-top: 40px;
+    display:grid;
+    grid-template-columns: 100fr 300fr 200fr 150fr;
+    grid-template-rows: 5fr 15fr 16fr 7fr;
+    height: 500px;
+    
+}
+.ejercicioGrid2 div{
+    border:1px solid black;
+    text-align: center;
+    
+}
+.ejercicioGrid3 div{
+    border: 1px solid black;
+}
+.ejercicioGrid3{
+    margin-top: 50px;
+    display: grid;
+    height: 300px;
+    grid:2fr 2fr / 1fr 1fr;
+}
