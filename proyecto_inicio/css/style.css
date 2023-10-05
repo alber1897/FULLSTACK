@@ -643,11 +643,17 @@ text-transform: uppercase;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-.seccionEnlaces {
-    max-width: 70%;
+.seccionImagen {
+    max-width: 45%;
     display: flex;
     flex-direction: column;
+    justify-content: end;
+}
+
+.seccionEnlaces {
+    display: flex;
+    flex-direction: column;
+    max-width: 55%;
 }
 
 .seccionLogin {
@@ -655,6 +661,7 @@ text-transform: uppercase;
     display: flex;
     justify-content: flex-end;
 }
+
 
 .seccionLogin a {
 
@@ -701,20 +708,19 @@ text-transform: uppercase;
     text-decoration: none !important;
 }
 
-.seccionImagen {
-    width: 30%;
-    margin-right: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+.seccionImagen img{
+    max-width: 100%;
 }
+
+
 @media (max-width:768px){
     .seccionHeader{
         flex-direction: column;
+        
     }
-    .seccionImagen,.seccionEnlaces{
+    .seccionEnlaces, .seccionImagen{
         max-width: 100%;
         align-items: center;
-        margin-right: 0;
     }
+
 }
