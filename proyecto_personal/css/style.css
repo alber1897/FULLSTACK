@@ -1,5 +1,5 @@
 :root{
-
+    --fuenteNav:'Darker Grotesque', sans-serif;
 }
 html{
     font-size:62.5%;
@@ -8,5 +8,76 @@ html{
 body{
     font-size: 16px;
     font-family: var(--fuentePrincipal);
+    background-color: rgb(27, 26, 26);
+    margin: 0;
 }
 
+.contenedor{
+    width:80%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.nav{
+    background-color: black; 
+}
+.all-header{
+    display: grid;
+    grid: 1fr / 1fr 2fr 1fr;
+
+}
+
+.logo-header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.logo-header img{
+    height: 90px;
+}
+.menu-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--fuenteNav);
+}
+.menu-header a{
+    color:white;
+    font-size: 23px;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+.menu-header a:focus, a:hover{
+    background-size: 100% 2px;
+}
+
+/* SECCION MAIN */
+
+.main{
+    background-color: white;
+    height: 80vh;
+    
+}
+.boxesWelcome{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+
+}
+.boxesWelcome div{
+    margin-top: 40px;
+    border: 2px solid black;
+
+   
+}
+.boxesImg1{
+    background-image: url(../img/RadissonRED-MAD_195-scaled-384x540.jpg);
+    background-size: cover;
+}
