@@ -1,5 +1,6 @@
 :root{
     --fuenteNav:'Darker Grotesque', sans-serif;
+    --fuenteMain:'Over the Rainbow', cursive;
 }
 html{
     font-size:62.5%;
@@ -19,7 +20,8 @@ body{
 
 /* HEADER */
 .nav{
-    background-color: rgb(0, 0, 0); 
+    background-color: rgb(255, 255, 255); 
+    border-bottom: 4px solid black;
 }
 .all-header{
     display: grid;
@@ -33,7 +35,7 @@ body{
    
 }
 .logo-header img{
-    height: 90px;
+    height: 60px;
 }
 .menu-header{
     display: flex;
@@ -42,10 +44,10 @@ body{
     align-items: center;
     font-family: var(--fuenteNav);
     letter-spacing: 4px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .menu-header a{
-    color:white;
+    color:rgb(3, 3, 3);
     font-size: 21px;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
@@ -59,7 +61,7 @@ body{
     background-size: 100% 2px;
 }
 .logo-header h1{
-    color:white;
+    color:rgb(0, 0, 0);
     font-family: var(--fuenteNav);
     font-size: 35px;
     letter-spacing: 1px;
@@ -75,8 +77,9 @@ body{
 
 .main{
     height: 100vh;
-    /* background-image:url(../img/fondo.jpg); */
-    background-color: rgba(254, 254, 254, 0.91);
+     background-image: url(../img/1906.i123.003.tropical\ leaves\ palm\ branch\ realistic\ transparent\ frame.jpg);
+     background-color: rgba(254, 254, 254, 0.546);
+    background-repeat: no-repeat;
 }
 .boxesWelcome{
     padding-top: 50px;
@@ -88,7 +91,7 @@ body{
 
 .boxWelcomeText h2{
     color: rgb(0, 0, 0);
-    font-family: var(--fuenteNav);
+    font-family: var(--fuenteMain);
     font-weight: 800;
     text-decoration: underline;
     
