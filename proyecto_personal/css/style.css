@@ -20,7 +20,7 @@ body{
 
 /* HEADER */
 .nav{
-    background-color: rgb(255, 255, 255); 
+    background-color: rgb(0, 0, 0); 
     border-bottom: 4px solid black;
 }
 .all-header{
@@ -40,14 +40,15 @@ body{
 .menu-header{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    margin-right: 180px;
     align-items: center;
     font-family: var(--fuenteNav);
     letter-spacing: 4px;
     font-weight: 600;
 }
 .menu-header a{
-    color:rgb(3, 3, 3);
+    color:rgb(255, 255, 255);
     font-size: 21px;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
@@ -61,7 +62,7 @@ body{
     background-size: 100% 2px;
 }
 .logo-header h1{
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     font-family: var(--fuenteNav);
     font-size: 35px;
     letter-spacing: 1px;
@@ -76,24 +77,29 @@ body{
 /* SECCION MAIN */
 
 .main{
-    height: 100vh;
-     background-image: url(../img/1906.i123.003.tropical\ leaves\ palm\ branch\ realistic\ transparent\ frame.jpg);
-     background-color: rgba(254, 254, 254, 0.546);
+    border-top:1px solid white;
+    background-color: rgba(184, 157, 3, 0.836);
     background-repeat: no-repeat;
 }
 .boxesWelcome{
     padding-top: 50px;
-    height: 80vh;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
+    
 }
 
+.boxWelcomeText{
+   padding:10px;
+
+}
 .boxWelcomeText h2{
     color: rgb(0, 0, 0);
     font-family: var(--fuenteMain);
     font-weight: 800;
     text-decoration: underline;
+    text-align: center;
+    font-size: 35px;
     
 }
 .boxWelcomeText p{
@@ -102,34 +108,133 @@ body{
     font-weight: 600;
     letter-spacing: 1px;
     font-size:19px;
+    
 }
-.boxWelcomeImage{
-    background-image: url(../img/tequeños.jpg);
-    background-repeat: no-repeat;
-    margin-left: 90px;
-    margin-top: 27px;
-    height: 60vh;
+.text-main{
+    padding:20px;
+}
 
+/*IMAGENES MAIN*/
+
+.imgWelcome{
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.imgWelcome1{
+    height: 350px;
+    width: 350px;
+    border:8px solid white;
+    border-radius: 50%;
+    background-image: url(../img/tequeños.jpg);
+    background-position: center;
+  }
+  
+/*BOTON*/
 .button-welcome{
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-   
+    margin-top: 50px;
+
 }
 .button-cta-welcome{
-    padding:7px;
-    border:2px solid black;
-    width: 30%;
+    padding:15px;
+    width: 40%;
+    background-color: black;
+    border-radius: 8px;
+    
 }
 .button-cta-welcome a{
     text-decoration: none;
     text-align: center;
-    color:black;
+    color:rgb(255, 255, 255);
     font-family: var(--fuenteNav);
-    font-weight: 700;
+    font-weight: 800;
     font-size: 20px;
     letter-spacing: 1px;
+}
 
+
+
+/* SECCION COCTELES */
+.cocktails{
+    border-top:1px solid white;
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+}
+.cocktailsGeneral{
+    padding-top: 50px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60% 40%;
+    
+}
+
+.cocktailsText{
+   padding:10px;
+
+}
+.cocktailsText h2{
+    color: rgb(255, 255, 255);
+    font-family: var(--fuenteMain);
+    font-weight: 800;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 35px;
+    
+}
+.cocktailsText p{
+    color: rgb(255, 255, 255);
+    font-family: var(--fuenteNav);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size:19px;
+    
+}
+.text-cocktails{
+    padding:20px;
+}
+
+/*IMAGENES MAIN*/
+
+.imgCocktails{
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgCocktails1{
+    height: 350px;
+    width: 350px;
+    border:8px solid white;
+    border-radius: 50%;
+    background-image: url(../img/mojitos.jpg);
+    background-position: center;
+  }
+  
+/*BOTON DE LOCALES*/
+.button-welcome{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+.button-cta-welcome{
+    padding:15px;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+
+}
+.button-cta-welcome a{
+    text-decoration: none;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    font-family: var(--fuenteNav);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
