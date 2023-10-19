@@ -80,16 +80,21 @@ body{
     border-top:1px solid white;
     /* background-color: #f8b218;
     background-repeat: no-repeat; */
-    background-image: url(../img/1653930994119.jpg);
+    background-image: url(../img/hamburguesa-carniceriaespinosa-1.jpg);
     background-position: center;
+    background-repeat: no-repeat;
 
 }
+.mainCa{
+background-color: rgba(0, 0, 0, 0.462);
+}
+
 .boxesWelcome{
     padding-top: 10px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 40% 60%;
-    background-color: rgba(0, 0, 0, 0.462);
+    
 }
 
 .boxWelcomeText{
@@ -131,8 +136,8 @@ body{
     width: 350px;
     border:8px solid white;
     border-radius: 50%;
-    background-image: url(../img/tequeños.jpg);
-    background-position: center;
+    background-image: url(../img/hamburguesa_600.jpg);
+    background-position: left;
   }
   
 /*BOTON*/
@@ -147,91 +152,9 @@ body{
 .button-cta-welcome{
     padding:15px;
     width: 40%;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     
-}
-.button-cta-welcome a{
-    text-decoration: none;
-    text-align: center;
-    color:rgb(255, 255, 255);
-    font-family: var(--fuenteNav);
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-
-
-
-/* SECCION COCTELES */
-.cocktails{
-    border-top:1px solid white;
-    background-color: rgb(0, 0, 0);
-    background-repeat: no-repeat;
-}
-.cocktailsGeneral{
-    padding-top: 50px;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 60% 40%;
-    
-}
-
-.cocktailsText{
-   padding:10px;
-
-}
-.cocktailsText h2{
-    color: rgb(255, 255, 255);
-    font-family: var(--fuenteMain);
-    font-weight: 800;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 35px;
-    
-}
-.cocktailsText p{
-    color: rgb(255, 255, 255);
-    font-family: var(--fuenteNav);
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size:19px;
-    
-}
-.text-cocktails{
-    padding:20px;
-}
-
-/*IMAGENES MAIN*/
-
-.imgCocktails{
-  padding:10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.imgCocktails1{
-    height: 350px;
-    width: 350px;
-    border:8px solid white;
-    border-radius: 50%;
-    background-image: url(../img/mojitos.jpg);
-    background-position: center;
-  }
-  
-/*BOTON DE LOCALES*/
-.button-welcome{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 50px;
-}
-.button-cta-welcome{
-    padding:15px;
-    width: 40%;
-    background-color: rgb(255, 255, 255);
-
 }
 .button-cta-welcome a{
     text-decoration: none;
@@ -241,4 +164,55 @@ body{
     font-weight: 800;
     font-size: 20px;
     letter-spacing: 1px;
+}
+
+.bestseller{
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+}
+.all-images{
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.65fr 0.35fr;
+
+}
+.all-images div{
+
+}
+.three-images{
+    padding:10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+}
+.three-images div{
+    margin-right: 10px;
+}
+.sliderBox{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.slider{
+
+    background-image: url(../img/hamburguesa-carniceriaespinosa-1.jpg);
+    background-position: left;
+}
+.three1{
+    background-image: url(../img/tequeños.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.three2{
+    background-image: url(../img/ensalada.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.three3{
+    background-image: url(../img/ensalada.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
