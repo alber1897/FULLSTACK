@@ -1,0 +1,136 @@
+let numeroJM=900;
+if(numeroJM==900){
+    console.log("Tu numero es 900");
+}else{
+    console.log("Tu numero no es 900");
+}
+
+
+function cajero(np,cantidad){
+    if(np=="1897"){
+        console.log("Tu pin es correcto");
+    
+        if(cantidad>=200){
+            console.log("Puedes sacar dinero");
+        }
+    
+        else{
+            console.log("No puedes sacar dinero");
+        }
+    
+    }else{
+        console.log("Tu pin es incorrecto");
+    }
+}
+cajero(1897,150);
+
+
+let rol="editor";
+
+if(rol=="Administrador"){
+    console.log("Bienvenido admin");
+} else if(rol=="editor"){
+    console.log("Bienvenido editor");
+}
+else{
+    console.log("No tienes acceso");
+}
+
+let estacionActual="Otoño";
+
+if(estacionActual=="Invierno"){
+    console.log("Es la estacion del año, la siguiente estacion es Primavera");
+}else if(estacionActual=="Primavera"){
+    console.log("Es la estacion del año, la siguiente estacion es Verano");
+}
+else if(estacionActual=="Verano"){
+    console.log("Es la estacion del año, la siguiente estacion es Otoño");
+}
+else if(estacionActual=="Otoño"){
+    console.log("Es la estacion del año, la siguiente estacion es Invierno");
+}
+else{
+    console.log("No has introducido una estacion del año");
+}
+
+
+function notas(n){
+    if(n>=9 && n<=10){
+        console.log("Tienes un sobresaliente");
+    }else if(n>=7 && n<9){
+        console.log("Tienes un notable");
+    }
+    else if(n>=5 && n<7){
+        console.log("Es la estacion del año, la siguiente estacion es Otoño");
+    }
+    else if(n>0 && n<5){
+        console.log("Estas suspenso");
+    }
+    else{
+        console.log("No has introducido una nota valida");
+    }
+}
+notas(3);
+
+// let metodo=prompt("Mete metodo de pago");
+let metodo=10;
+switch(metodo){
+    case "Tarjeta": console.log("Pagaste con tarjeta");
+    break;
+    
+    case "Efectivo": console.log("Pagaste con efectivo");
+    break;
+
+    case "Bizum": console.log("Pagaste con bizum");
+    break;
+
+    default: "Pendiente de pago";
+    break;
+}
+
+let num=11;
+function multiploConmutador(num){
+    switch(true){
+        case num*num<100 : console.log(`El resultado de ${num} por si mismo es menor que 100`);
+        break;
+    
+        case num*num<200 && num*num>100 : console.log(`El resultado de ${num}
+         por si mismo es mayor que 100 y menor que 200`);
+        break;
+    
+        default: console.log("No esta dentro de lo previsto");;
+        break;
+    }
+}
+multiploConmutador(4);
+
+function multiploConSi(num){
+    if(num*num<100){
+        console.log(`El resultado de ${num} por si mismo es menor que 100`);
+    }else if(num*num<200 && num*num>100){
+        console.log(`El resultado de ${num} por si mismo
+        es mayor que 100 y menor que 200`);
+    }else{
+        console.log("No esta dentro de lo previsto");
+    }
+}
+multiploConSi(10);
+
+let num2=parseInt(prompt("introduzca numero"));
+
+switch(num2+10){
+    case 9: console.log(`Es igual a 9`); 
+    break;
+
+    case 12: console.log(`Es igual a 12`); 
+    break;
+
+    case 15: console.log(`Es igual a 15`); 
+    break;
+
+    case 100: console.log(`Es igual a 100`); 
+    break;
+
+    default: console.log(`No esta en lo previstoo`);
+    break;
+}

@@ -103,17 +103,17 @@ background-color: rgba(0, 0, 0, 0.462);
 }
 .boxWelcomeText h2{
     color: rgb(255, 255, 255);
-    font-family: var(--fuenteMain);
+    font-family: var(--fuenteNav);
     font-weight: 800;
-    text-decoration: underline;
+    
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
     
 }
 .boxWelcomeText p{
     color: rgb(255, 255, 255);
     font-family: var(--fuenteNav);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     font-size:19px;
     
@@ -132,8 +132,8 @@ background-color: rgba(0, 0, 0, 0.462);
 
 }
 .imgWelcome1{
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
     border:8px solid white;
     border-radius: 50%;
     background-image: url(../img/hamburguesa_600.jpg);
@@ -147,11 +147,11 @@ background-color: rgba(0, 0, 0, 0.462);
     flex-direction: row;
     justify-content: center;
     margin-top: 50px;
-
+    width: 100%;
 }
 .button-cta-welcome{
     padding:15px;
-    width: 40%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     
@@ -166,53 +166,31 @@ background-color: rgba(0, 0, 0, 0.462);
     letter-spacing: 1px;
 }
 
-.bestseller{
-    background-color: rgb(255, 255, 255);
-    padding: 50px;
-}
-.all-images{
-    height: 600px;
+/*******SECCION DEBAJO MAIN*******/
+
+.parts{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.65fr 0.35fr;
+    grid-template-rows: 80px 300px;
+    padding:20px;
+    margin-top: 20px;
+    
+}
+.parts div{
+    /* border: 1px solid black; */
+}
 
+.textProducts h2{
+    color: rgb(0, 0, 0);
+    font-family: var(--fuenteMain);
+    font-weight: 800;
+    text-align: center;
+    font-size: 32px;
+    text-decoration: underline;
+    
 }
-.all-images div{
 
+.imageProducts{
+    padding:40px;
 }
-.three-images{
-    padding:10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-content: space-between;
-}
-.three-images div{
-    margin-right: 10px;
-}
-.sliderBox{
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}
-.slider{
-
-    background-image: url(../img/hamburguesa-carniceriaespinosa-1.jpg);
-    background-position: left;
-}
-.three1{
-    background-image: url(../img/tequeños.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.three2{
-    background-image: url(../img/ensalada.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.three3{
-    background-image: url(../img/ensalada.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
+ 
