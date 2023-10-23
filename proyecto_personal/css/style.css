@@ -20,8 +20,8 @@ body{
 
 /* HEADER */
 .nav{
-    background-color: rgb(255, 255, 255); 
-    /* border-bottom: 1px solid black; */
+    background-color: #f8b218; 
+   
 }
 .all-header{
     display: grid;
@@ -167,13 +167,18 @@ background-color: rgba(0, 0, 0, 0.462);
 }
 
 /*******SECCION DEBAJO MAIN*******/
-
+.products{
+    background-color: #ffffff;
+    height: 100vh;
+    border-top:1px solid white;
+}
 .parts{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80px 300px;
     padding:20px;
-    margin-top: 20px;
+    
+    
     
 }
 .parts div{
@@ -194,3 +199,4 @@ background-color: rgba(0, 0, 0, 0.462);
     padding:40px;
 }
  
+
