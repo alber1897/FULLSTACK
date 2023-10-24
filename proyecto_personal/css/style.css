@@ -20,7 +20,7 @@ body{
 
 /* HEADER */
 .nav{
-    background-color: #ffffff; 
+    background-color: #000000; 
    
 }
 .all-header{
@@ -48,7 +48,7 @@ body{
     font-weight: 600;
 }
 .menu-header a{
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     font-size: 21px;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
@@ -62,7 +62,7 @@ body{
     background-size: 100% 2px;
 }
 .logo-header h1{
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     font-family: var(--fuenteNav);
     font-size: 35px;
     letter-spacing: 1px;
@@ -77,16 +77,18 @@ body{
 /* SECCION MAIN */
 
 .main{
-    border-top:1px solid white;
+    /* border-top:1px solid white; */
     /* background-color: #f8b218;
     background-repeat: no-repeat; */
     background-image: url(../img/hamburguesa-carniceriaespinosa-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    height: 50vh;
 
 }
 .mainCa{
 background-color: rgba(0, 0, 0, 0.462);
+height: 50vh;
 }
 
 .boxesWelcome{
@@ -134,7 +136,7 @@ background-color: rgba(0, 0, 0, 0.462);
 .imgWelcome1{
     height: 300px;
     width: 300px;
-    border:4px solid white;
+    border:4px solid #ffffff;
     border-radius: 50%;
     background-image: url(../img/hamburguesa_600.jpg);
     background-position: left;
@@ -147,7 +149,7 @@ background-color: rgba(0, 0, 0, 0.462);
     flex-direction: row;
     justify-content: center;
     margin-top: 50px;
-    width: 100%;
+    /* width: 30%; */
 }
 .button-cta-welcome{
     padding:15px;
@@ -168,14 +170,14 @@ background-color: rgba(0, 0, 0, 0.462);
 
 /*******SECCION DEBAJO MAIN*******/
 .products{
-    /* background-color: #f8b218; */
-    
-    height: 75vh;
-    border-top:1px solid rgb(255, 255, 255);
+    /* background-color: #6f1e1e;  */
+    background-color: white;
+    height: 55vh;
+    /* border-top:1px solid rgb(255, 255, 255); */
 }
 .parts{
     width: 100% !important;
-    height: 75vh;
+    height: 55vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80px 300px;
@@ -206,10 +208,9 @@ background-color: rgba(0, 0, 0, 0.462);
 	 display: flex;
 	 align-items: center;
 	 justify-content: center;
-	 padding: 60px 10px;
+	 padding: 10px;
 	 font-family: 'DM Sans', sans-serif;
 	 transition: background 0.4s ease-in;
-	 
      border-radius: 7px;
      
 }
@@ -348,22 +349,24 @@ background-color: rgba(0, 0, 0, 0.462);
 
 /* SECCION LOCALIZACION */
  .location{
-    height: 80vh;
+    height: 30%;
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
     grid-template-rows: 1fr;
-    border:1px solid black;
+    background-color: #121212;
  }
 
  .location-info{
     padding:20px;
-    background-color: #121212;
-    border-right:1px solid black;
+    /* background-color: #121212; */
+    
+
  }
  .location-info-data{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.8fr 0.2fr;
+    border-right: 2px solid #a5a5a5;
  }
  .data{
    
@@ -382,12 +385,14 @@ background-color: rgba(0, 0, 0, 0.462);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    justify-content: center;
 
  }
  .rss a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
  }
 .rss img{
     
@@ -403,8 +408,80 @@ background-color: rgba(0, 0, 0, 0.462);
  }
  .location-map{
     padding:20px;
+    margin-top: 105px;
  }
  .ubi{
-    border: 1px solid black;
+ 
     padding:20px;
  }
+ .politicas{
+    padding: 50px;
+    height: 150px;
+    background-color: #8e2727;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+ }
+ .privacidad{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    
+ }
+ .privacidad a{
+    color:rgb(255, 255, 255);
+    font-family: var(--fuenteNav);
+    font-weight: 500;
+    font-size: 26px;
+    text-decoration: none;
+    margin-right: 40px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    margin-right: 60px;
+    
+}
+.privacidad a:focus, a:hover{
+    background-size: 100% 2px;
+}
+
+
+/* SECCION 3 FOTOS MENU */
+.menu{
+    height: 50vh;
+}
+.content-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.content-menu div{
+    border-right:1px solid black;
+    height: 50vh;
+}
+@media (max-width:768px) {
+    .content-menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .content-menu div{
+        border:1px solid black;
+        height: 36vh;
+    }
+}
+.menu1{
+    background-image: url(../img/mesas_menu.jpg);
+    background-position: center;
+}
+.menu2{
+    background-image: url(../img/bolsa_menu.png);
+    background-position: center;
+}
+.menu3{
+    background-image: url(../img/hamburguesa-menu.png);
+    background-position: center;
+}
