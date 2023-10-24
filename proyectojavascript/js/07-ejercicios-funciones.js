@@ -34,7 +34,7 @@ do{
 F: INVERTIR
 P: CADENA*/
 
-let  cadena = "Hola"
+
 function invertir(cadena){
     let cadenaF="";
     for(let i=cadena.length-1;i>=0;i--){
@@ -49,24 +49,23 @@ console.log(invertir("Hola"));
 función que concatene dos cadenas.
 F: CONCATENAR
 P: CADENA1, CADENA2*/
-let cadena1="Hola";
-let cadena2="Adios";
+
 
 let concatenar=(cadena1,cadena2)=> cadenaFinal=`${cadena1} ${cadena2}`;
 
-console.log(concatenar(cadena1,cadena2));
+console.log(concatenar("cadena1","cadena2"));
 
 /*
 función que determine si una cadena contiene una letra.
 F: CONTIENE
 P: CADENA, LETRA*/
-let letra="a"
+
 let contiene=(cadena,letra)=>{
     
     if(cadena.includes(letra)){console.log(`La letra ${letra} si se encuentra en la cadena`);}
     else{console.log(`La letra ${letra} NO se encuentra en la cadena`)}
 }
-contiene(cadena1,letra);
+contiene("cadena1","a");
 
 
 /*
