@@ -110,6 +110,18 @@ body{
     margin-bottom: 30px;
     
 }
+@media (max-width:768px) {
+    .disolve{
+        display:none;
+    }
+    .btn-conocenos{
+        display: none;
+    }
+    .textDescubrenos{
+        width: 90%;
+    }
+
+}
 
 /* SECCION 3 FOTOS MENU */
 
