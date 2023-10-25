@@ -1,0 +1,198 @@
+:root{
+    --fuenteNav:'Darker Grotesque', sans-serif;
+    --fuenteMain:'Over the Rainbow', cursive;
+}
+html{
+    font-size:62.5%;
+
+}
+body{
+    font-size: 16px;
+    font-family: var(--fuentePrincipal);
+    margin: 0;
+    background-image: url(/proyecto_personal/img/hamburguesa-carniceriaespinosa-1.jpg);
+    
+}
+
+.nav{
+    background-color: #000000; 
+   
+}
+.all-header{
+    display: grid;
+    grid: 1fr / 35% 65%;
+
+}
+.logo-header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.logo-header img{
+    height: 60px;
+}
+.menu-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 180px;
+    align-items: center;
+    font-family: var(--fuenteNav);
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+.menu-header a{
+    color:rgb(255, 255, 255);
+    font-size: 21px;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    margin-right: 60px;
+}
+.menu-header a:focus, a:hover{
+    background-size: 100% 2px;
+}
+.logo-header h1{
+    color:rgb(255, 255, 255);
+    font-family: var(--fuenteNav);
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+/* SECCION DE TEXTO */
+
+.darkD{
+    background-color: rgba(0, 0, 0, 0.462);
+}
+.textDescubrenos{
+    width: 50%;
+    margin: 0  auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.6fr 0.2fr;
+    
+}
+.textDescubrenos h2{
+    margin-top: 6rem;
+    color: rgb(255, 255, 255);
+    font-family: var(--fuenteMain);
+    font-weight: 800;
+    text-align: center;
+    font-size: 30px;
+}
+.textDescubrenos  p{
+    color: rgb(255, 255, 255);
+    font-family: var(--fuenteNav);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size:19px;
+}
+.btn {
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+.danger {background-color: #f44336;} 
+.danger:hover {background: #da190b;}
+
+.btn-conocenos{
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+
+/* SECCION 3 FOTOS MENU */
+
+.content-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgba(0, 0, 0, 0.462);
+}
+
+.content-menu div{
+    height: 60rem;
+}
+
+.darkM{
+    background-color: rgba(0, 0, 0, 0.462);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    
+}
+.titulo-menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    
+}
+.titulo-menu h2{
+    color: rgb(255, 255, 255);
+    font-family: var(--fuenteMain);
+    font-weight: 800;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    
+}
+
+.menu1{
+    background-image: url(/proyecto_personal/img/mesas_menu.jpg);
+    background-position: center;
+}
+.menu2{
+    background-image: url(/proyecto_personal/img/bolsa_menu.png);
+    background-position: center;
+}
+.menu3{
+    background-image: url(/proyecto_personal/img/hamburguesa-menu.png);
+    background-position: center;
+}
+.btn-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:20px;
+
+}
+.btnM {
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size:18px
+  }
+.btnMR {background-color: #f44336;} 
+.btnMR:hover {background: white;color:#f44336;}
+
+.btn-M{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+@media (max-width:768px) {
+    .content-menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+}
