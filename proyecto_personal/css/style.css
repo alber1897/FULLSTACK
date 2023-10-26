@@ -317,7 +317,6 @@ height: 90rem;
     margin-top: 105px;
  }
  .ubi{
- 
     padding:20px;
  }
  .politicas{
@@ -348,9 +347,6 @@ height: 90rem;
     transition: background-size .3s;
     margin-right: 60px;
     
-}
-.privacidad a:focus, a:hover{
-    background-size: 100% 2px;
 }
 
 

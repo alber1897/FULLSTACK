@@ -1,0 +1,227 @@
+<section class="menu">
+    <div class="content-menu">
+        <div class="menu1"></div>
+        <div class="menu2"></div>
+        <div class="menu3"></div>
+    </div>
+</section>
+
+<section class="location">
+            <div class="location-info contenedor">
+                <h2>TropicalHouse®</h2>
+                <div class="location-info-data">
+                    <div class="data">
+                        Pl. Fuente Honda, 3<br> 28911 Leganés, Madrid<br>
+                        Tel. (+34) 943 366 471 / (+34) 943 361 599<br>
+
+                        TropicalHouse® Gastro-Bar<br>
+                        info@tropicalhouse.com<br>
+                    </div>
+                    <div class="rss">
+                        <a href=""><img src="../proyecto_personal/img/social-instagram-icon-512x512-6mp2zfl3.png"></a>
+                        <a href=""><img src="../proyecto_personal/img/twitter.png"></a>
+                        <a href=""><img src="../proyecto_personal/img/2021_Facebook_icon.svg.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map">
+                <div class="ubi">
+                    <div style="width: 80%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=Pl.+Fuente+Honda,+3,+28911+Leganés,+Madrid,+España&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"><a href="https://www.gps.ie/sport-gps/">gps watches</a></iframe></div>
+                </div>
+            </div>
+</section>
+<footer class="politicas">
+    <div class="privacidad ">
+        <a class="" href="">Politica de Cookies</a>
+        <a class="" href="">Politica de Privacidad</a>
+        <a class="" href="">Aviso Legal</a>
+    </div>
+    <div></div>
+</footer>
+
+
+
+
+
+
+
+/*******SECCION DEBAJO MAIN*******/
+.products{
+    /* background-color: #6f1e1e;  */
+    background-color: white;
+    height: 55vh;
+    /* border-top:1px solid rgb(255, 255, 255); */
+}
+.parts{
+    width: 100% !important;
+    height: 55vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 300px;
+    
+    
+}
+
+
+.textProducts h2{
+    color: rgb(0, 0, 0);
+    font-family: var(--fuenteMain);
+    font-weight: 800;
+    text-align: center;
+    font-size: 32px;
+    text-decoration: underline;
+    
+}
+
+.imageProducts{
+    padding:40px;
+}
+ 
+/* SECCION LOCALIZACION */
+ .location{
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    grid-template-rows: 1fr;
+    background-color: #121212;
+ }
+
+ .location-info{
+    padding:20px;
+    /* background-color: #121212; */
+    
+
+ }
+ .location-info-data{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 0.2fr;
+    border-right: 2px solid #a5a5a5;
+ }
+ .data{
+   
+    padding: 10px;
+    color:#fff;
+    font-family: var(--fuenteNav);
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+ .rss{
+    margin-top: 50px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+
+ }
+ .rss a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+.rss img{
+    
+    width:50px;
+    height: 50px;
+}
+ .location-info h2{
+    color:white;
+    font-family: var(--fuenteNav);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+ }
+ .location-map{
+    padding:20px;
+    margin-top: 105px;
+    
+ }
+ .ubi{
+    padding:20px;
+ }
+ @media (max-width:768px){
+    .location{
+        height: 1550px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 0.4fr;
+        background-color: #121212;
+     }
+ }
+ /* FOOTER */
+ .politicas{
+    padding: 50px;
+    height: 10vh;
+    background-color: #8e2727;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+ }
+ .privacidad{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    
+ }
+ .privacidad a{
+    color:rgb(255, 255, 255);
+    font-family: var(--fuenteNav);
+    font-weight: 500;
+    font-size: 26px;
+    text-decoration: none;
+    margin-right: 40px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    margin-right: 60px;
+    
+}
+.privacidad a:focus, a:hover{
+    background-size: 100% 2px;
+}
+
+
+/* SECCION 3 FOTOS MENU */
+.menu{
+    height: 50vh;
+}
+.content-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.content-menu div{
+    border-right:1px solid black;
+    height: 50vh;
+}
+@media (max-width:768px) {
+    .content-menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .content-menu div{
+        border:1px solid black;
+        height: 36vh;
+    }
+}
+.menu1{
+    background-image: url(../img/mesas_menu.jpg);
+    background-position: center;
+}
+.menu2{
+    background-image: url(../img/bolsa_menu.png);
+    background-position: center;
+}
+.menu3{
+    background-image: url(../img/hamburguesa-menu.png);
+    background-position: center;
+}
