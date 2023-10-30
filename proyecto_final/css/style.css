@@ -37,7 +37,7 @@ nav h1{
     color:rgb(255, 255, 255);
     font-family: var(--fuenteNav);
     font-size: 35px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 nav ul{
     display: flex;
@@ -57,6 +57,7 @@ nav ul li a{
     color:rgb(255, 255, 255);
     font-size: 21px;
     font-weight: 600;
+    letter-spacing: 4px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -172,8 +173,9 @@ nav ul li a{
     font-weight: 800;
     text-align: center;
     font-size: 30px;
+    
 }
-.textDescubrenos  p{
+.textosP{
     color: rgb(255, 255, 255);
     font-family: var(--fuenteNav);
     font-weight: 500;
@@ -304,7 +306,7 @@ nav ul li a{
 
 }
 .localizacion{
-    background-color: rgba(0, 0, 0);
+    background-color: #111111;
     padding: 40px 20px;
     
     
@@ -387,8 +389,8 @@ nav ul li a{
 }
 .politicas{
     padding: 50px;
-    background-color: #111111;
-    border-top:1px solid white; 
+    background-color: #000000;
+    
  }
  .privacidad{
     
@@ -422,5 +424,72 @@ nav ul li a{
      .privacidad a{
         font-size:14px;
      }
+     
+}
+
+
+
+/* PAGINA DE CONTACTO */
+
+.paginaContacto{
+    background-color: #df9f16;
+    padding: 5rem;
+}
+.contactoGlobal{
+    width:90%;
+    background-color: #111111;
+    margin:0 auto;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 30px;
+}
+.ubicacionContacto{
+    padding:2rem;
+    border-left: 1px solid white;
+}
+.textoContacto{
+    padding:3rem;
+}
+.textoContacto h2{
+    color:white;
+    font-family: var(--fuenteNav);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.dataContacto{
+   text-align: center;
+    padding: 10px;
+    color:#fff;
+    font-family: var(--fuenteNav);
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 7rem;
+
+ }
+ @media (max-width:968px) {
+    .contactoGlobal{
+        width:auto;
+        background-color: #111111;
+        margin:0 auto;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 30px;
+    }
+    .ubicacionContacto{
+        padding:2rem;
+        border-top: 1px solid white;
+        border-left:0px;
+        
+    }
+    .textoContacto{
+        padding:0;
+    }
      
 }
