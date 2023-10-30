@@ -13,65 +13,153 @@ body{
 
 }
 
-.nav{
-    background-color: #000000; 
-
-}
-.all-header{
-    display: grid;
-    grid: 1fr / 35% 65%;
-
-}
-.logo-header{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   
-}
-.logo-header img{
-    height: 60px;
-}
-.menu-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-right: 180px;
-    align-items: center;
-    font-family: var(--fuenteNav);
-    letter-spacing: 4px;
-    font-weight: 600;
-}
-.menu-header a{
-    color:rgb(255, 255, 255);
-    font-size: 21px;
+*{
+    padding: 0;
+    margin: 0;
     text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-    margin-right: 60px;
+    list-style: none;
+    box-sizing: border-box;
 }
-.menu-header a:focus, a:hover{
-    background-size: 100% 2px;
+nav{
+    background: #111111;
+    height: 100px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.logo-header h1{
+.logo{
+    height: 40px;
+    margin-left: 3rem;
+}
+nav h1{
     color:rgb(255, 255, 255);
     font-family: var(--fuenteNav);
     font-size: 35px;
     letter-spacing: 1px;
 }
+nav ul{
+    display: flex;
+    justify-content: center;
+    margin-right: 3rem;
+}
+nav ul li{
+    margin: 20px 5px 0px 5px;
+    
+}
+li a:focus, a:hover{
+    background-size: 100% 2px;
+}
+
+nav ul li a{
+    font-family: var(--fuenteNav);
+    color:rgb(255, 255, 255);
+    font-size: 21px;
+    font-weight: 600;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-image: linear-gradient(#f8b218, #f8b218);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    margin-right: 30px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+@keyframes blinker {
+50% {
+    opacity: 0;
+}
+}
+@keyframes hideShow {
+0%, 16.6%, 33.33%, 100% { width: 0; }
+16.66%, 33.3% { width: auto; }
+}
+
+
+/* MEDIAS QUERIES */
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: flex;
+    }
+    .logo{
+        height: 40px;
+        margin-left: 0rem;
+    }
+    nav{
+        padding: 0 30px;
+    }
+    nav i{
+        margin-top: 16px;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #f8b218;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        z-index: 10;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color:black;
+        font-weight: 800;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    .banner .row h2{
+        font-size: 3rem;
+    } 
+    .banner .btnServices{
+        margin-top: 3rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.3rem;
+    }
+}
+
+
 
 /* SECCION DE TEXTO */
 .descubrenos{
     background-color: #f8b218;
+    
 }
 .darkD{
     background-color: rgba(0, 0, 0, 0.169);
 }
 .textDescubrenos{
     width: 50%;
-    margin: 0  auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 0.6fr 0.2fr;
@@ -91,7 +179,10 @@ body{
     font-weight: 500;
     letter-spacing: 1px;
     font-size:19px;
+    margin-bottom: 2rem;
 }
+
+/* BOTONES */
 .btn {
     border: none; 
     color: white; 
@@ -135,7 +226,7 @@ body{
 }
 
 .content-menu div{
-    height: 60rem;
+    height: 55rem;
 }
 
 .darkM{
@@ -166,15 +257,17 @@ body{
 
 .menu1{
     background-image: url(/proyecto_personal/img/mesas_menu.jpg);
-    background-position: center;
+    background-size: contain;
+    
 }
 .menu2{
     background-image: url(/proyecto_personal/img/bolsa_menu.png);
-    background-position: center;
+    background-size: contain;
 }
 .menu3{
     background-image: url(/proyecto_personal/img/hamburguesa-menu.png);
-    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .btn-menu{
     display: flex;
@@ -294,7 +387,8 @@ body{
 }
 .politicas{
     padding: 50px;
-    background-color: #8e2727;
+    background-color: #111111;
+    border-top:1px solid white; 
  }
  .privacidad{
     
@@ -302,6 +396,7 @@ body{
     justify-content: center;
  }
  .privacidad a{
+
     color:rgb(255, 255, 255);
     font-family: var(--fuenteNav);
     font-weight: 500;
