@@ -1,6 +1,7 @@
 :root{
     --fuenteNav:'Darker Grotesque', sans-serif;
     --fuenteMain:'Over the Rainbow', cursive;
+    --colorAmarillo: #f8b218;
 }
 html{
     font-size:62.5%;
@@ -492,4 +493,38 @@ nav ul li a{
         padding:0;
     }
      
+}
+
+/* PAGINA DE CARTA */
+.carta{
+    
+    padding: 5rem;
+    
+}
+.carta div{
+    margin-bottom: 5rem;
+}
+.navMenu{
+    background: var(--colorAmarillo);
+    height: 6rem;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:6px;
+}
+.navMenu h2{
+    color:rgb(0, 0, 0);
+    font-family: var(--fuenteMain);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.checkbtnMenu{
+    font-size: 30px;
+    color: #000000;
+    cursor: pointer;
+    
+}
+#checkMenu{
+    display: none;
 }

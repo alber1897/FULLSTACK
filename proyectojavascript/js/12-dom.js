@@ -37,3 +37,4 @@ ejercicioEnlace.textContent="Ejercicio Enlace";
 ejercicioEnlace.classList.add("enlace");
 
 document.querySelector(".navPrincipal").appendChild(ejercicioEnlace);
+

@@ -1,3 +1,9 @@
+body{
+    height: 1000vh;
+}
 .seccionPrincipal{
-    background-image: url(./ico-centro.png);
+    /* background-image: url(./ico-centro.png); */
+}
+.seccionPrincipal h1{
+    color:white;
 }
