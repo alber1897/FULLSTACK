@@ -766,18 +766,17 @@ nav ul li a{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:5rem;
   }
-  .boxCarta{
-    
+
+  .boxCarta{  
     background-color: #111111;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    height: 80vh;
     width: 95%;
     
   }
@@ -807,4 +806,50 @@ nav ul li a{
     grid-template-columns: 1fr;
     grid-template-rows: 0.7fr 0.3fr;
     border:1px solid white;
+  }
+  .entrantes{
+    background-image: url(../img/palmera.png);
+    background-size: cover;
+    padding: 2rem;
+  }
+  .boxCarta h2{
+    color: rgb(0, 0, 0);
+    font-family: var(--fuenteMain);
+    font-weight: 800;
+    font-size: 35px;
+    text-transform: uppercase;
+  }
+  .productoCarta{
+    color: rgb(0, 0, 0);
+    font-family: var(--fuenteNav);
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+  .precioCarta{
+    color: rgb(0, 0, 0);
+    font-family: var(--fuenteNav);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 19px;
+
+  }
+  .producto{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 767px) {
+    .boxCarta{
+    
+        
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+       
+        
+      }
+
+
   }
