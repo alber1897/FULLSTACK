@@ -41,7 +41,7 @@
     justify-content: center;
     
 }
-.tituloCaja{
+.seccionesCajas div{
     border-radius:4px;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,7 @@
     padding:4rem;
     
 }
-.productosCajas{
+.productoSecciones div{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
     grid-row-gap: 22px;
@@ -78,7 +78,7 @@
 .descripcionProducto{
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 .mobileBox h3{
     color:rgb(255, 255, 255);

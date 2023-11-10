@@ -518,254 +518,11 @@ nav ul li a{
      
 }
 
-/* PAGINA DE CARTA */
-.seccionesCarta{
-    margin-bottom: 5rem;
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: column;
-    gap:3rem;
-    justify-content: flex-start;
-}
-.navMenu{
-    background: var(--colorAmarillo);
-    height: 6rem;
-    padding: 0 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius:6px;
-    width: 67rem;
-}
-.navMenu h2{
-    color:rgb(0, 0, 0);
-    font-family: var(--fuenteMain);
-    text-transform: uppercase;
-    font-weight: 800;
-}
-.checkbtnMenu{
-    font-size: 30px;
-    color: #000000;
-    cursor: pointer;
-    
-}
-#checkMenu{
-    display: none;
-}
-.icon-desplegable{
-    background-image: url(../img/caret-cuadrado-abajo.png);
-    background-size: contain;
-    display: flex;
-    height: 40px;
-    width: 40px;
-}
-.productos{
-    position: absolute;
-        width: 80%;
-        height: 30vh;
-        border:2px solid black;
-        top: 250px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-        flex-direction: column;
-        z-index: 10;
-}
 
-#checkMenu:checked ~ .productos{
-    left:50px;
-}
-
-/* CARTAS */
-.carta{
-    /* padding:5rem; */
-    text-align: center;
-    background-color: var(--colorAmarillo);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:2rem 5rem;
-    
-}
-.carta h2{
-    color: rgb(0, 0, 0);
-    font-family: var(--fuenteNav);
-    font-size: 40px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    font-family: var(--body-font);
-    font-size: 16px;
-    background-color:#111111;
-     color: var(--white-color);
-    font-weight: 600;
-    border-radius: 8px;
-    padding-bottom: 1rem;
-  }
-  
-  .card__container {
-    padding-block: 5rem;
-    
-  }
-  
-  .card__content {
-    margin-inline: 1.75rem;
-    border-radius: 1.25rem;
-    overflow: hidden;
-  }
-  
-  .card__article {
-    /* width: 300px;  */
-    border-radius: 1.25rem;
-    overflow: hidden;
-  }
-  
-  .card__image {
-    position: relative;
-    /* background-color: var(--first-color-light); */
-    /* padding-top: 1.5rem; */
-    margin-bottom: -.75rem;
-  }
-  
-  .card__data {
-    background-color: var(--container-color);
-    padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .card__img {
-    width: 330px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 5;
-  }
-  
-  .card__shadow {
-    width: 200px;
-    height: 200px;
-    background-color: var(--first-color-alt);
-    border-radius: 50%;
-    position: absolute;
-    top: 3.75rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    filter: blur(45px);
-  }
-  
-  .card__name {
-    font-size: var(--h2-font-size);
-    color: var(--second-color);
-    margin-bottom: .75rem;
-  }
-  
-  .card__description {
-    font-weight: 500;
-    margin-bottom: 1.75rem;
-  }
-  
-  .card__button {
-    display: inline-block;
-    background-color: var(--first-color);
-    padding: .75rem 1.5rem;
-    border-radius: .25rem;
-    color: var(--dark-color);
-    font-weight: 600;
-  }
-  
-  /* Swiper class */
-  .swiper-button-prev:after,
-  .swiper-button-next:after {
-    content: "";
-  }
-  
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: initial;
-    height: initial;
-    font-size: 3rem;
-    color: var(--second-color);
-    display: none;
-  }
-  
-  .swiper-button-prev {
-    left: -8px;
-  }
-  
-  .swiper-button-next {
-    right: -8px;
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: hsl(212, 32%, 40%);
-    opacity: 1;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: var(--second-color);
-  }
-  
-  /*=============== BREAKPOINTS ===============*/
-  /* For small devices */
-  @media screen and (max-width: 767px) {
-    .card__data {
-      padding: 1rem;
-    }
-    .swiper-button-next{
-        display: block;
-        
-    }
-    .swiper-button-prev {
-      display: block;
-      
-    }
-
-
-  }
-  
-  /* For medium devices */
-  @media screen and (min-width: 768px) {
-    .card__content {
-      margin-inline: 3rem;
-    }
-  
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: block;
-      
-    }
-  }
-  
-  /* For large devices */
-  @media screen and (min-width: 1120px) {
-    .card__container {
-      max-width: 1120px;
-    }
-  
-    .swiper-button-prev {
-      left: -1rem;
-    }
-    .swiper-button-next {
-      right: -1rem;
-    }
-  }
 
 
   .cartaPlana{
-    background-color: #f8b218;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    background-color: #f8b118d5;;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -773,23 +530,20 @@ nav ul li a{
   }
 
   .boxCarta{  
-    background-color: #111111;
+    background-image:url(../img/52875462-gráficos-brillantes-sin-patrón-sabrosas-hamburguesas-en-un-fondo-oscuro.jpg);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    width: 95%;
+ 
     
   }
-  .boxCarta div{
-    border: 1px solid white;
-  }
+
   .cartaParte1{
     padding:2rem;
     color:white;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 0.4fr;
-    border:1px solid white;
+    display: flex;
+    flex-direction: column;
+    
   }
   .cartaParte2{
     padding:2rem;
@@ -797,54 +551,85 @@ nav ul li a{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.2fr 0.3fr;
-    border:1px solid white;
+    
   }
   .cartaParte3{
     padding:2rem;
     color:white;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.7fr 0.3fr;
-    border:1px solid white;
+    grid-template-rows: 0.5fr 0.3fr;
+    
   }
-  .entrantes{
-    background-image: url(../img/palmera.png);
-    background-size: cover;
-    padding: 2rem;
-  }
+
   .boxCarta h2{
-    color: rgb(0, 0, 0);
+    color: rgb(247, 215, 53);
     font-family: var(--fuenteMain);
     font-weight: 800;
     font-size: 35px;
     text-transform: uppercase;
+    text-align: center;
   }
+  .boxCarta h3{
+    color: rgb(247, 89, 53);
+    font-family: var(--fuenteMain);
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1rem;
+    text-align: center;
+    
+  }
+  .boxCarta h4{
+    color: rgb(255, 255, 255);
+    font-family: var(--fuenteNav);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem;
+    text-align: center;
+  }
+  
   .productoCarta{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: var(--fuenteNav);
     font-weight: 800;
     letter-spacing: 1px;
     font-size: 19px;
     text-transform: uppercase;
+    padding: 2px 1rem;
 }
-  .precioCarta{
-    color: rgb(0, 0, 0);
+
+  .descProducto{
+    color: rgb(255, 255, 255);
     font-family: var(--fuenteNav);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     font-size: 19px;
-
+    padding: 0rem 1rem 1rem 1rem;
+    /* border-top: 1px solid white; */
   }
   .producto{
-    width: 55%;
+    /* width: 55%; */
     display: flex;
     justify-content: space-between;
+    /* background-color: #f33e3ec7; */
+    border-bottom: 1px solid white;
+    
+  
+    
   }
-  .combos{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+  .entrantes, .alitas, .hamburguesas, .ensaladas, .compartir, .postres, .patatas, .ensaladas{
+    background-color: #232323f5;
+    margin: 10px;
+    border-radius:5px;
+    padding:2rem;
+    
+    
+    /* border: 3px solid white; */
   }
+ 
   @media screen and (max-width: 767px) {
     .boxCarta{
     
