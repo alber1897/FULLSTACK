@@ -16,14 +16,13 @@ function obtenerSecciones(){
 function obtenerEntrantes(){
   fetch("carta.json").then(resultado=>{return resultado.json();})
         .then(datos=>{
-          let secciones=[...document.querySelectorAll("h3")];
+          let secciones=[...document.querySelectorAll(".seccionesCajas div")];
           for(let i=0;i<secciones.length;i++){
             
             const {entrantes}=datos;
             
             entrantes.forEach(element => {
-            let introducir=document.querySelector(".productos"+secciones[i].innerText);
-
+            let introducir=document.querySelector(".productos"+secciones[i].className.slice(7));
             let contenidoPlato=document.createElement("DIV");
             contenidoPlato.classList.add("contenidoPlato");
             introducir.appendChild(contenidoPlato);
@@ -59,30 +58,44 @@ function obtenerEntrantes(){
 }
 obtenerEntrantes();
 
+let todas=[...document.querySelectorAll(".productoSecciones div") ];
+
+
 
 function ajustarDisplay(seccion){
-  let todas=[...document.querySelectorAll(".productoSecciones>div")];
+  
   for(let i=0;i<todas.length;i++){
-     console.log(todas[i]);
-    if(todas[i]==seccion){
-      todas[i].style.display="in-line";
-    }else{todas[i].style.display="none";}
+    if(todas[i].className.slice(9)==seccion.className.slice(7)){
+      todas[i].style.display="grid";
+    }else{
+      todas[i].style.display="none";
+    }
     
   }
 }
 
-let entrantes=document.getElementsByClassName("productosEntrantes");
-let patatas=document.getElementsByClassName("productosPatatas");
-let alitas=document.getElementsByClassName(".productosAlitas");
-let compartir=document.getElementsByClassName(".productosCombos");
-let ensaladas=document.getElementsByClassName(".productosEnsaladas");
-let hamburguesas=document.getElementsByClassName(".productosHamburguesas");
-let postres=document.getElementsByClassName(".productosPostres");
+let entrantes=document.querySelector(".seccionEntrantes");
+let patatas=document.querySelector(".seccionPatatas");
+let alitas=document.querySelector(".seccionAlitas");
+let compartir=document.querySelector(".seccionCombos");
+let ensaladas=document.querySelector(".seccionEnsaladas");
+let hamburguesas=document.querySelector(".seccionHamburguesas");
+let postres=document.querySelector(".seccionPostres");
+
 
 entrantes.addEventListener("click",()=>{ajustarDisplay(entrantes)});
-document.addEventListener("click",()=>{ajustarDisplay(patatas)});
-document.addEventListener("click",()=>{ajustarDisplay(alitas)});
-document.addEventListener("click",()=>{ajustarDisplay(compartir)});
-document.addEventListener("click",()=>{ajustarDisplay(ensaladas)});
-document.addEventListener("click",()=>{ajustarDisplay(hamburguesas)});
-document.addEventListener("click",()=>{ajustarDisplay(postres)});
+patatas.addEventListener("click",()=>{ajustarDisplay(patatas)});
+alitas.addEventListener("click",()=>{ajustarDisplay(alitas)});
+compartir.addEventListener("click",()=>{ajustarDisplay(compartir)});
+ensaladas.addEventListener("click",()=>{ajustarDisplay(ensaladas)});
+hamburguesas.addEventListener("click",()=>{ajustarDisplay(hamburguesas)});
+postres.addEventListener("click",()=>{ajustarDisplay(postres)});
+
+// let secciones = document.querySelector(".seccionesCajas");
+
+// secciones.addEventListener("click", (event) => {
+//   const target = event.target;
+//   if (target && target.matches(".seccionesCajas > div")) {
+//     ajustarDisplay(target);
+//   }
+// });
