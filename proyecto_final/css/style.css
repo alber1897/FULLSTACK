@@ -296,16 +296,16 @@ nav ul li a{
 }
 
 .menu1{
-    background-image: url(/proyecto_personal/img/mesas_menu.jpg);
+    background-image: url(/img/mesas_menu.jpg);
     background-size: cover;
     
 }
 .menu2{
-    background-image: url(/proyecto_personal/img/bolsa_menu.png);
+    background-image: url(/img/bolsa_menu.png);
     background-size: cover;
 }
 .menu3{
-    background-image: url(/proyecto_personal/img/hamburguesa-menu.png);
+    background-image: url(/img/hamburguesa-menu.png);
     background-size: cover;
 }
 .btn-menu{
