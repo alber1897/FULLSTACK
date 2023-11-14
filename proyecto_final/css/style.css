@@ -6,7 +6,12 @@
     font-family: Kalam;
     src: url(../fonts/Kalam-Regular.ttf) format('truetype');
 }
+@font-face {
+    font-family: Comfortaa;
+    src: url(../fonts/Comfortaa-VariableFont_wght.ttf) format('truetype');
+}
 :root{
+    --fuenteComfortaa:'Comfortaa';
     --fuenteNav:'Darker Grotesque', sans-serif;
     --fuenteMain:'Over the Rainbow', cursive;
     --fuenteAgbalumo:'Kalam', regular ;
@@ -358,7 +363,7 @@ nav ul li a{
 }
 
 .localizacion1{
-    border-right:1px solid white;
+    border-right:2px solid rgb(0, 0, 0);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 0.8fr;
@@ -371,14 +376,13 @@ nav ul li a{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
-.data{
-   
+.data p{
+    font-size: 17px;
     padding: 10px;
     color:#fff;
-    font-family: var(--fuenteNav);
-    font-size: 22px;
-    font-weight: 500;
+    font-family: var(--fuenteComfortaa);
 
+    margin-top: 2rem;
  }
  .rss{
     margin-top: 50px;
@@ -484,15 +488,15 @@ nav ul li a{
 }
 .ubicacionContacto{
     padding:2rem;
-    border-left: 1px solid white;
+    border-left: 2px solid rgb(0, 0, 0);
 }
 .textoContacto{
     padding:3rem;
 }
 .textoContacto h2{
-    color:white;
+    color:var(--colorAmarillo);
     font-family: var(--fuenteNav);
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 20px;
