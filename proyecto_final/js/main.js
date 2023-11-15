@@ -56,6 +56,16 @@ function obtenerEntrantes(){
 }
 obtenerEntrantes();
 
+
+let entrantes=document.querySelector(".seccionEntrantes");
+let patatas=document.querySelector(".seccionPatatas");
+let alitas=document.querySelector(".seccionAlitas");
+let compartir=document.querySelector(".seccionCompartir");
+let ensaladas=document.querySelector(".seccionEnsaladas");
+let hamburguesas=document.querySelector(".seccionHamburguesas");
+let postres=document.querySelector(".seccionPostres");
+
+
 let todas=[...document.querySelectorAll(".productoSecciones div") ];
 function ajustarDisplay(seccion){
   
@@ -70,16 +80,15 @@ function ajustarDisplay(seccion){
     
   }
 }
-
-let entrantes=document.querySelector(".seccionEntrantes");
-let patatas=document.querySelector(".seccionPatatas");
-let alitas=document.querySelector(".seccionAlitas");
-let compartir=document.querySelector(".seccionCompartir");
-let ensaladas=document.querySelector(".seccionEnsaladas");
-let hamburguesas=document.querySelector(".seccionHamburguesas");
-let postres=document.querySelector(".seccionPostres");
-
-
+function ajustarInicio(){
+  for(let i=0;i<todas.length;i++){
+    console.log(todas[i].className.slice(9))
+      if(todas[i].className.slice(9)!="entrantes"){
+          todas[i].style.display="none";
+      }
+  }
+}
+ajustarInicio();
 entrantes.addEventListener("click",()=>{ajustarDisplay(entrantes)});
 patatas.addEventListener("click",()=>{ajustarDisplay(patatas)});
 alitas.addEventListener("click",()=>{ajustarDisplay(alitas)});
@@ -88,52 +97,4 @@ ensaladas.addEventListener("click",()=>{ajustarDisplay(ensaladas)});
 hamburguesas.addEventListener("click",()=>{ajustarDisplay(hamburguesas)});
 postres.addEventListener("click",()=>{ajustarDisplay(postres)});
 
-function cambioProductos(){
-  fetch("carta.json").then(resultado=>{return resultado.json();})
-        .then(datos=>{
-          const secciones = Object.keys(datos); // Obtén todas las secciones del JSON
 
-          secciones.forEach((seccion) => {
-            datos[seccion].forEach((element) => {
-              let introducir = document.querySelector(".editar" + seccion); // Usa el nombre de la sección como clase
-
-
-            let tr=document.createElement("TR");
-            introducir.appendChild(tr);
-
-            let id=document.createElement("TD");
-            id.textContent=element.id;
-            tr.appendChild(id);
-
-            let nombre=document.createElement("TD");
-            nombre.textContent=element.nombrePlato;
-            tr.appendChild(nombre);
-
-            let descripcion=document.createElement("TD");
-            descripcion.textContent=element.descripcion;
-            tr.appendChild(descripcion);
-
-            let precio=document.createElement("TD");
-            precio.textContent=element.precio;
-            tr.appendChild(precio);
-
-            let url=document.createElement("TD");
-            url.textContent=element.urlImagen;
-            tr.appendChild(url);
-
-            let editar=document.createElement("TD");
-            tr.appendChild(editar);
-
-            let boton=document.createElement("A");
-            boton.classList.add("edit-btn");
-            boton.textContent="Editar";
-            editar.appendChild(boton);
-
-
-          });
-        })
-          
-        })
-  
-}
-cambioProductos();
