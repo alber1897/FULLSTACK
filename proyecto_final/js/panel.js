@@ -42,9 +42,9 @@ async function cambioProductos() {
         let tr=document.createElement("TR");
         introducir.appendChild(tr);
 
-        let id=document.createElement("TD");
-        id.textContent=element.id;
-        tr.appendChild(id);
+        // let id=document.createElement("TD");
+        // id.textContent=element.idProducto;
+        // tr.appendChild(id);
 
         let nombre=document.createElement("TD");
         nombre.textContent=element.nombrePlato;
@@ -79,6 +79,7 @@ async function cambioProductos() {
     console.error('Error al cargar los datos:', error);
   }
 }
+cambioProductos(); 
 
 
 function displayModify(e){
@@ -102,20 +103,56 @@ function modificar(plato){
             
             
             let form=document.createElement("FORM");
+            form.setAttribute("id","miFormulario")
+            form.setAttribute("method","post")
+            form.setAttribute("action","actualizar.php")
             tabla.appendChild(form);
+
+            //CREAMOS CAMPO ID PRODUCTO A EDITAR
+            let labelId=document.createElement("LABEL");
+            labelId.setAttribute("for","producto");
+            labelId.textContent="Id Producto: ";
+            form.appendChild(labelId);
+            
+
+
+            let inputId=document.createElement("INPUT");
+            inputId.setAttribute("type","text");
+            inputId.setAttribute("id","producto")
+            inputId.setAttribute("name","idProducto");
+            inputId.setAttribute("readonly",true);
+            inputId.setAttribute("value",element.idProducto);
+            form.appendChild(inputId);
+
+           //CREAMOS CAMPO ID PRODUCTO A EDITAR
+            let labelSeccion=document.createElement("LABEL");
+            labelSeccion.setAttribute("for","seccion");
+            labelSeccion.textContent="Id Seccion: ";
+            form.appendChild(labelSeccion);
+            
+
+
+            let inputSeccion=document.createElement("INPUT");
+            inputSeccion.setAttribute("type","text");
+            inputSeccion.setAttribute("id","seccion")
+            inputSeccion.setAttribute("name","idSeccion")
+            inputSeccion.setAttribute("readonly",true);
+            inputSeccion.setAttribute("value",element.idSeccion);
+            form.appendChild(inputSeccion);
 
 
             //CREAMOS CAMPO NOMBRE A EDITAR
             let labelN=document.createElement("LABEL");
-            labelN.setAttribute("for","nombre");
-            labelN.textContent=plato+": ";
+            labelN.setAttribute("for","plato");
+            labelN.textContent="Nombre del Plato: ";
             form.appendChild(labelN);
             
 
 
             let inputN=document.createElement("INPUT");
             inputN.setAttribute("type","text");
-            inputN.setAttribute("id","nombre");
+            inputN.setAttribute("id","plato");
+            inputN.setAttribute("name","nombrePlato")
             inputN.setAttribute("value",plato);
             form.appendChild(inputN);
             
@@ -130,6 +167,7 @@ function modificar(plato){
             let inputD=document.createElement("INPUT");
             inputD.setAttribute("type","text");
             inputD.setAttribute("id","descripcion");
+            inputD.setAttribute("name","descripcion")
             inputD.setAttribute("value",element.descripcion);
             form.appendChild(inputD)
 
@@ -142,6 +180,7 @@ function modificar(plato){
             let inputP=document.createElement("INPUT");
             inputP.setAttribute("type","text");
             inputP.setAttribute("id","precio");
+            inputP.setAttribute("name","precio")
             inputP.setAttribute("value",element.precio);
             form.appendChild(inputP)
 
@@ -155,8 +194,18 @@ function modificar(plato){
             let inputI=document.createElement("INPUT");
             inputI.setAttribute("type","text");
             inputI.setAttribute("id","imagen");
+            inputI.setAttribute("name","urlImagen")
             inputI.setAttribute("value",element.urlImagen);
             form.appendChild(inputI)
+
+
+            //CREAMOS BOTON SUBMIT
+
+            let inputS=document.createElement("INPUT");
+            inputS.setAttribute("type","submit");
+            inputS.setAttribute("value","Modificar");
+            inputS.setAttribute("id","recogerDatos")
+            form.appendChild(inputS)
            
           }
           
@@ -165,21 +214,47 @@ function modificar(plato){
     })
 }
 
+function recogerDatos(){
+  
+  console.log(document.getElementById('miFormulario'))
+  const formData = new FormData(document.getElementById('miFormulario'));
+  const data = {};
 
-document.addEventListener('DOMContentLoaded', function () {
-  cambioProductos();  // Llama a la función dentro del evento DOMContentLoaded
-});
+  formData.forEach((value, key) => {
+      data[key] = value;
+  });
 
-
+  console.log(data);
+}
+function changeData(n){
+  fetch("carta.json").then(response=>{return response.json();}).
+  then(datos=>{
+    let secciones=Object.keys(datos);
+    
+    secciones.forEach(s=>{
+      datos[s].forEach(element=>{
+        console.log(n)
+        if(n.id==element.idProducto && n.idS==element.idSeccion){
+          
+        response.json(element.nombrePlato=n.nombrePlato1);
+        element.descripcion=n.descripcion;
+        element.precio=n.precio;}
+      })
+    })
+  })
+}
 
 
 
 document.addEventListener("click",e=>{
   const secciones=[".seccionEntrantes",".seccionPatatas",".seccionAlitas",".seccionCompartir",".seccionEnsaladas",".seccionHamburguesas",".seccionPostres"]
-
+  console.log(e.target.id)
   if(secciones.includes("."+e.target.className)){
     document.querySelector(".productos table").style.display="table-row-group";
-    document.querySelector(".productos form").remove();
+    if(document.querySelector(".productos form")){
+      document.querySelector(".productos form").remove();
+    }
+    
     ajustarBody(e.target)
   }
   else if(e.target.className=="edit-btn"){
@@ -189,4 +264,15 @@ document.addEventListener("click",e=>{
     
   }
 
+  else if(e.target.id=="recogerDatos"){
+    document.querySelector("form").addEventListener("submit",x=>{
+      
+      const dataF= Object.fromEntries(new FormData(x.target))
+      changeData(dataF);
+
+    })
+     
+    
+  }
 });
+

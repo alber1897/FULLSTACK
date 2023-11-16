@@ -78,11 +78,11 @@ body{
     background-color: #1b1b1b;
 }
 .productos{
-  margin-top: 5rem;
+  
     padding:3rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     
 }
 
