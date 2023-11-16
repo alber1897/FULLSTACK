@@ -28,5 +28,6 @@
     $json_updated = json_encode($products, JSON_PRETTY_PRINT);
     file_put_contents("carta.json", $json_updated);
 
-echo json_encode(['success' => true, 'message' => 'Datos actualizados correctamente']);
+    header("Location: /cpanel.html", TRUE, 301);
+    exit();
 ?>

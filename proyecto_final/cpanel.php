@@ -10,6 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <?php
+session_start();
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php"); // Redirigir a la página de inicio de sesión si no ha iniciado sesión
+    exit();
+}
+
+$usuario = $_SESSION['usuario'];
+?>
 </head>
 <body>
 

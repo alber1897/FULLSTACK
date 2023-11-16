@@ -59,13 +59,26 @@ async function cambioProductos() {
         tr.appendChild(url);
 
         let editar=document.createElement("TD");
+        editar.classList.add("acciones");
         tr.appendChild(editar);
 
-        let boton=document.createElement("A");
-        boton.classList.add("edit-btn");
-        boton.setAttribute("id",element.nombrePlato);
-        boton.textContent="Editar";
-        editar.appendChild(boton);
+        let botonEditar=document.createElement("A");
+        botonEditar.classList.add("edit-btn");
+        botonEditar.setAttribute("id",element.nombrePlato);
+        botonEditar.textContent="Editar";
+        editar.appendChild(botonEditar);
+
+        let botonEliminar=document.createElement("A");
+        botonEliminar.classList.add("remove-btn");
+        botonEliminar.setAttribute("id",element.nombrePlato);
+        botonEliminar.textContent="Eliminar";
+        editar.appendChild(botonEliminar);
+
+        let botonAñadir=document.createElement("A");
+        botonAñadir.classList.add("add-btn");
+        botonAñadir.setAttribute("id",element.nombrePlato);
+        botonAñadir.textContent="Añadir";
+        editar.appendChild(botonAñadir);
 
       });
     });
@@ -209,6 +222,270 @@ function modificar(plato){
       })
     })
 }
+function eliminar(plato){
+  
+  fetch("carta.json").then(response=>{return response.json();}).
+    then(datos=>{
+      let secciones=Object.keys(datos);
+
+      secciones.forEach(s=>{
+        datos[s].forEach(element=>{
+         
+          if(plato==element.nombrePlato){
+            let tabla=document.querySelector(".productos");
+            
+            
+            let form=document.createElement("FORM");
+            form.setAttribute("id","miFormulario")
+            form.setAttribute("method","post")
+            form.setAttribute("action","eliminar.php")
+            tabla.appendChild(form);
+
+            //CREAMOS CAMPO ID PRODUCTO A EDITAR
+            let labelId=document.createElement("LABEL");
+            labelId.setAttribute("for","producto");
+            labelId.textContent="Id Producto: ";
+            form.appendChild(labelId);
+            
+
+
+            let inputId=document.createElement("INPUT");
+            inputId.setAttribute("type","text");
+            inputId.setAttribute("id","producto")
+            inputId.setAttribute("name","idProducto");
+            inputId.setAttribute("readonly",true);
+            inputId.setAttribute("value",element.idProducto);
+            form.appendChild(inputId);
+
+           //CREAMOS CAMPO ID PRODUCTO A EDITAR
+            let labelSeccion=document.createElement("LABEL");
+            labelSeccion.setAttribute("for","seccion");
+            labelSeccion.textContent="Id Seccion: ";
+            form.appendChild(labelSeccion);
+            
+
+
+            let inputSeccion=document.createElement("INPUT");
+            inputSeccion.setAttribute("type","text");
+            inputSeccion.setAttribute("id","seccion")
+            inputSeccion.setAttribute("name","idSeccion")
+            inputSeccion.setAttribute("readonly",true);
+            inputSeccion.setAttribute("value",element.idSeccion);
+            form.appendChild(inputSeccion);
+
+
+            //CREAMOS CAMPO NOMBRE A EDITAR
+            let labelN=document.createElement("LABEL");
+            labelN.setAttribute("for","plato");
+            labelN.textContent="Nombre del Plato: ";
+            form.appendChild(labelN);
+            
+
+
+            let inputN=document.createElement("INPUT");
+            inputN.setAttribute("type","text");
+            inputN.setAttribute("id","plato");
+            inputN.setAttribute("name","nombrePlato")
+            inputN.setAttribute("readonly",true);
+            inputN.setAttribute("value",plato);
+            form.appendChild(inputN);
+            
+
+            //CREAMOS CAMPO DESCRIPCION A EDITAR
+            let labelD=document.createElement("LABEL");
+            labelD.setAttribute("for","descripcion");
+            labelD.textContent="Descripcion: ";
+            form.appendChild(labelD);
+            
+
+            let inputD=document.createElement("INPUT");
+            inputD.setAttribute("type","text");
+            inputD.setAttribute("id","descripcion");
+            inputD.setAttribute("name","descripcion");
+            inputD.setAttribute("readonly",true);
+            inputD.setAttribute("value",element.descripcion);
+            form.appendChild(inputD)
+
+            //CREAMOS CAMPO PRECIO A EDITAR
+            let labelP=document.createElement("LABEL");
+            labelP.setAttribute("for","precio");
+            labelP.textContent="Precio: ";
+            form.appendChild(labelP)
+
+            let inputP=document.createElement("INPUT");
+            inputP.setAttribute("type","text");
+            inputP.setAttribute("id","precio");
+            inputP.setAttribute("name","precio")
+            inputP.setAttribute("readonly",true);
+            inputP.setAttribute("value",element.precio);
+            form.appendChild(inputP)
+
+           
+            //CREAMOS IMAGEN NOMBRE A EDITAR
+            let labelI=document.createElement("LABEL");
+            labelI.setAttribute("for","imagen");
+            labelI.textContent="Imagen: ";
+            form.appendChild(labelI)
+
+            let inputI=document.createElement("INPUT");
+            inputI.setAttribute("type","text");
+            inputI.setAttribute("id","imagen");
+            inputI.setAttribute("name","urlImagen")
+            inputI.setAttribute("readonly",true);
+            inputI.setAttribute("value",element.urlImagen);
+            form.appendChild(inputI)
+
+
+            //CREAMOS BOTON SUBMIT
+
+            let inputS=document.createElement("INPUT");
+            inputS.setAttribute("type","submit");
+            inputS.setAttribute("value","Confirmar eliminacion");
+            form.appendChild(inputS)
+           
+          }
+          
+        })
+      })
+    })
+}
+
+function aniadir(plato){
+  
+  fetch("carta.json").then(response=>{return response.json();}).
+    then(datos=>{
+      let secciones=Object.keys(datos);
+
+      secciones.forEach(s=>{
+        datos[s].forEach(element=>{
+         
+          if(plato==element.nombrePlato){
+            let tabla=document.querySelector(".productos");
+            
+            
+            let form=document.createElement("FORM");
+            form.setAttribute("id","miFormulario")
+            form.setAttribute("method","post")
+            form.setAttribute("action","aniadir.php")
+            tabla.appendChild(form);
+
+
+           //CREAMOS CAMPO ID PRODUCTO A EDITAR
+            let labelSeccion=document.createElement("LABEL");
+            labelSeccion.setAttribute("for","seccion");
+            labelSeccion.textContent="Seccion: ";
+            form.appendChild(labelSeccion);
+            
+
+
+            let inputSeccion=document.createElement("SELECT");
+            inputSeccion.setAttribute("type","text");
+            inputSeccion.setAttribute("id","seccion")
+            inputSeccion.setAttribute("name","idSeccion")
+            form.appendChild(inputSeccion);
+
+            let entrantes=document.createElement("OPTION");
+            entrantes.setAttribute("value","entrantes");
+            entrantes.textContent="ENTRANTES";
+            inputSeccion.appendChild(entrantes);
+
+            let patatas=document.createElement("OPTION");
+            patatas.setAttribute("value",2);
+            patatas.textContent="PATATAS";
+            inputSeccion.appendChild(patatas);
+            
+            let alitas=document.createElement("OPTION");
+            alitas.setAttribute("value",3);
+            alitas.textContent="ALITAS";
+            inputSeccion.appendChild(alitas);
+
+            let compartir=document.createElement("OPTION");
+            compartir.setAttribute("value",4);
+            compartir.textContent="COMPARTIR";
+            inputSeccion.appendChild(compartir);
+
+            let ensaladas=document.createElement("OPTION");
+            ensaladas.setAttribute("value",5);
+            ensaladas.textContent="ENSALADAS";
+            inputSeccion.appendChild(ensaladas);
+
+            let hamburguesas=document.createElement("OPTION");
+            hamburguesas.setAttribute("value",6);
+            hamburguesas.textContent="HAMBURGUESAS";
+            inputSeccion.appendChild(hamburguesas);
+
+            let postres=document.createElement("OPTION");
+            postres.setAttribute("value",7);
+            postres.textContent="POSTRES";
+            inputSeccion.appendChild(postres);
+
+            //CREAMOS CAMPO NOMBRE A AÑADIR
+            let labelN=document.createElement("LABEL");
+            labelN.setAttribute("for","plato");
+            labelN.textContent="Nombre del Plato: ";
+            form.appendChild(labelN);
+            
+
+
+            let inputN=document.createElement("INPUT");
+            inputN.setAttribute("type","text");
+            inputN.setAttribute("id","plato");
+            inputN.setAttribute("name","nombrePlato")
+            form.appendChild(inputN);
+            
+
+            //CREAMOS CAMPO DESCRIPCION A AÑADIR
+            let labelD=document.createElement("LABEL");
+            labelD.setAttribute("for","descripcion");
+            labelD.textContent="Descripcion: ";
+            form.appendChild(labelD);
+            
+
+            let inputD=document.createElement("INPUT");
+            inputD.setAttribute("type","text");
+            inputD.setAttribute("id","descripcion");
+            inputD.setAttribute("name","descripcion")
+            form.appendChild(inputD)
+
+            //CREAMOS CAMPO PRECIO A AÑADIR
+            let labelP=document.createElement("LABEL");
+            labelP.setAttribute("for","precio");
+            labelP.textContent="Precio: ";
+            form.appendChild(labelP)
+
+            let inputP=document.createElement("INPUT");
+            inputP.setAttribute("type","text");
+            inputP.setAttribute("id","precio");
+            inputP.setAttribute("name","precio")
+            form.appendChild(inputP)
+
+           
+            //CREAMOS IMAGEN NOMBRE A AÑADIR
+            let labelI=document.createElement("LABEL");
+            labelI.setAttribute("for","imagen");
+            labelI.textContent="Imagen: ";
+            form.appendChild(labelI)
+
+            let inputI=document.createElement("INPUT");
+            inputI.setAttribute("type","text");
+            inputI.setAttribute("id","imagen");
+            inputI.setAttribute("name","urlImagen")
+            form.appendChild(inputI)
+
+
+            //CREAMOS BOTON SUBMIT
+
+            let inputS=document.createElement("INPUT");
+            inputS.setAttribute("type","submit");
+            inputS.setAttribute("value","Añadir Plato");
+            form.appendChild(inputS)
+           
+          }
+          
+        })
+      })
+    })
+}
 
 function recogerDatos(){
   
@@ -244,7 +521,7 @@ function changeData(n){
 
 document.addEventListener("click",e=>{
   const secciones=[".seccionEntrantes",".seccionPatatas",".seccionAlitas",".seccionCompartir",".seccionEnsaladas",".seccionHamburguesas",".seccionPostres"]
-  console.log(e.target.id)
+
   if(secciones.includes("."+e.target.className)){
     document.querySelector(".productos table").style.display="table-row-group";
     if(document.querySelector(".productos form")){
@@ -267,7 +544,17 @@ document.addEventListener("click",e=>{
       changeData(dataF);
 
     })
-     
+  }
+  else if(e.target.className=="add-btn"){
+    
+    document.querySelector(".productos table").style.display="none";
+    aniadir(e.target.id);
+    
+  }
+  else if(e.target.className=="remove-btn"){
+    
+    document.querySelector(".productos table").style.display="none";
+    eliminar(e.target.id);
     
   }
 });
