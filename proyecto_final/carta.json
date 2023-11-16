@@ -3,9 +3,9 @@
         {
             "idProducto":1,
             "idSeccion":1,
-            "nombrePlato":"Krispy Tenders",
+            "nombrePlato":"Krispy Tendersss",
             "descripcion":"6 Tiernas Tiras de Pollo Marinadas con Salsa Chimichurri y Ranchera",
-            "precio":8,
+            "precio":10,
             "urlImagen":"/proyecto_final/img/52875462-gráficos-brillantes-sin-patrón-sabrosas-hamburguesas-en-un-fondo-oscuro.jpg"
         },
         {
@@ -14,7 +14,7 @@
             "nombrePlato":"Fingers Queso & Bacon",
             "descripcion":"6 Fingers de Queso y Bacon, recubiertos en Masa Crujiente y Mermelada de Tomate",
             "precio":8,
-                 "urlImagen":"/proyecto_final/img/52875462-gráficos-brillantes-sin-patrón-sabrosas-hamburguesas-en-un-fondo-oscuro.jpg"
+                 "urlImagen":"/img/52875462-gráficos-brillantes-sin-patrón-sabrosas-hamburguesas-en-un-fondo-oscuro.jpg"
         },
         {
             "idProducto":3,

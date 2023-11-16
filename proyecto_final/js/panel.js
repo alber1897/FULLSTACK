@@ -42,10 +42,6 @@ async function cambioProductos() {
         let tr=document.createElement("TR");
         introducir.appendChild(tr);
 
-        // let id=document.createElement("TD");
-        // id.textContent=element.idProducto;
-        // tr.appendChild(id);
-
         let nombre=document.createElement("TD");
         nombre.textContent=element.nombrePlato;
         tr.appendChild(nombre);

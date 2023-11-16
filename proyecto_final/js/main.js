@@ -10,9 +10,7 @@ class Productos{
 
   }
 }
-function obtenerSecciones(){
 
-}
 function obtenerEntrantes(){
   fetch("carta.json").then(resultado=>{return resultado.json();})
         .then(datos=>{
